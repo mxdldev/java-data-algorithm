@@ -32,7 +32,7 @@ public class MainTest {
     treeNode3.setLeftNote(treeNode5);
 
     System.out.println(getTreeHeight(treeNode));
-    System.out.println(getTreeNodeCount(treeNode));
+    //System.out.println(getTreeNodeCount(treeNode));
   }
 
   // 求这个二叉树的高
