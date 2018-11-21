@@ -1,4 +1,4 @@
-package test.yesway.com.testlib;
+package C栈队列.A002用数组实现一个队列;
 
 /**
  * Description: <><br>

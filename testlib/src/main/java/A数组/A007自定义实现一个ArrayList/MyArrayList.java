@@ -1,9 +1,9 @@
-package test.yesway.com.testlib;
+package A数组.A007自定义实现一个ArrayList;
 
 import java.util.Arrays;
 
 /**
- * Description: <><br>
+ * Description: <自定义实现一个ArrayList><br>
  * Author: gxl<br>
  * Date: 2018/11/19<br>
  * Version: V1.0.0<br>
@@ -17,9 +17,11 @@ public class MyArrayList {
   public MyArrayList() {
     arr = new int[initsize];
   }
-  public int get(int index){
-      return arr[index];
+
+  public int get(int index) {
+    return arr[index];
   }
+
   public boolean add(int value) {
     // 说明此时数组已经满了，要扩容了
     if (size == arr.length) {

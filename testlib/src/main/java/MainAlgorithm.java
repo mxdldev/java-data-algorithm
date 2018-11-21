@@ -1,11 +1,10 @@
-package test.yesway.com.testlib;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
-import java.util.TreeSet;
+import java.util.Arrays;
+import java.util.Iterator;
+import D链表.A001用数组实现一个链表.ListNote;
+import E树.A001求二叉树的节点数高遍历.TreeNode;
 
 /**
  * Description: <><br>
@@ -14,7 +13,7 @@ import java.util.TreeSet;
  * Version: V1.0.0<br>
  * Update: <br>
  */
-public class MainTest {
+public class MainAlgorithm {
   public static void main(String[] args) {
     TreeNode treeNode = new TreeNode(0);
     TreeNode treeNode1 = new TreeNode(1);
@@ -32,7 +31,7 @@ public class MainTest {
     treeNode3.setLeftNote(treeNode5);
 
     System.out.println(getTreeHeight(treeNode));
-    //System.out.println(getTreeNodeCount(treeNode));
+    // System.out.println(getTreeNodeCount(treeNode));
   }
 
   // 求这个二叉树的高
@@ -70,7 +69,8 @@ public class MainTest {
           + getTreeNodeCount(treeNode.getRightNote());
     }
   }
-  //翻转一个链表：指针法
+
+  // 翻转一个链表：指针法
   private static ListNote reverseListNode2(ListNote listNote) {
     // 声明的头指针
     ListNote head = listNote;
@@ -100,7 +100,8 @@ public class MainTest {
     tail.next = null;
     return head;
   }
-  //翻转一个链表：数组法
+
+  // 翻转一个链表：数组法
   private static ListNote reverseListNode(ListNote listNote) {
     // 翻转一个链表
     ListNote tempNode = listNote;
@@ -127,7 +128,8 @@ public class MainTest {
     }
     return headNode;
   }
-  //查找有环链表的入口节点
+
+  // 查找有环链表的入口节点
   private static ListNote getFirstNode(ListNote listNote) {
     // 如果链表有环，请找到其入口节点
     ListNote slow = listNote;
@@ -185,7 +187,8 @@ public class MainTest {
     }
     return false;
   }
-  //删除集合中的偶数元素
+
+  // 删除集合中的偶数元素
   private static void removeEvenNumber(ArrayList<Integer> myArrayList) {
     Iterator<Integer> iterator = myArrayList.iterator();
     while (iterator.hasNext()) {
@@ -220,11 +223,64 @@ public class MainTest {
     return arr;
   }
 
+  // 查找一个数组里面有没有重复元素
+  private static boolean checkRepeat(int[] arr) {
+    // 1.声明一个散列表表
+    // 2.遍历这个数组
+    // 3.对遍历的元素依次进行判断，如果散列表里面没有就往散列表里面塞，有就直接退出了
+    HashSet<Integer> hashSet = new HashSet<>();
+    for (int i = 0; i < arr.length; i++) {
+      if (hashSet.contains(arr[i])) {
+        return true;
+      } else {
+        hashSet.add(arr[i]);
+      }
+    }
+    return false;
+  }
 
+  // 桶排序，声明一个以 最大元素+1 为长度的数组，遍历原数组，桶数组计数
+  private static void sortBucket(int[] arr) {
+    int[] arr1 = new int[100 + 1];
+    for (int i = 0; i < arr.length; i++) {
+      arr1[arr[i]]++;
+    }
+    for (int i = 0; i < arr1.length; i++) {
+      int count = arr1[i];
+      while (count > 0) {
+        System.out.println(i);
+        count--;
+      }
+    }
+  }
 
+  // 选择排序，选择第一个元素和剩下的n-1个比较
+  private static void sortChange(int[] arr) {
+    // 第一轮确定第一个元素，第二轮确定第二个元素
+    for (int i = 0; i < arr.length; i++) {
+      for (int j = i + 1; j < arr.length; j++) {
+        // 选择第一i个元素和剩余的元素进行比较
+        if (arr[i] > arr[j]) {
+          int temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+      }
+    }
+  }
 
-
-
-
-
+  // 冒泡排序：两个循环，通过两两相比，进行排序
+  private static void sortBubbling(int[] arr) {
+    // 第一轮确定最后一个，第二轮确定倒数第二个...
+    for (int i = 0; i < arr.length - 1; i++) {
+      for (int j = 0; j < arr.length - i - 1; j++) {
+        // 两两相比，就像鱼吐水泡一样...
+        if (arr[j] > arr[j + 1]) {
+          int temp = arr[j + 1];
+          arr[j + 1] = arr[j];
+          arr[j] = temp;
+        }
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
-package test.yesway.com.testlib;
+package D链表.A001用数组实现一个链表;
 
 /**
- * Description: <><br>
+ * Description: <用数组实现一个链表><br>
  * Author: gxl<br>
  * Date: 2018/11/20<br>
  * Version: V1.0.0<br>
@@ -14,7 +14,7 @@ public class MyListLink {
 
   public void addLast(int value) {
     ListNote listNote = new ListNote();
-    listNote.setVal(value);
+    listNote.setData(value);
     if (first == null) {
       first = listNote;
     } else {
@@ -24,7 +24,7 @@ public class MyListLink {
     size++;
   }
 
-    public ListNote getFirst() {
-        return first;
-    }
+  public ListNote getListLink() {
+    return first;
+  }
 }
