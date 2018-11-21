@@ -1,7 +1,7 @@
 package A002选择排序;
 
 /**
- * Description: <><br>
+ * Description: <选择排序><br>
  * Author:      gxl<br>
  * Date:        2018/11/21<br>
  * Version:     V1.0.0<br>
