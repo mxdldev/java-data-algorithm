@@ -3,7 +3,7 @@ package D链表.A004翻转一个链表;
 import java.util.ArrayList;
 import java.util.List;
 
-import D链表.A001用数组实现一个链表.ListNote;
+import D链表.A001用数组实现一个链表.ListNode;
 import D链表.A001用数组实现一个链表.MyListLink;
 
 /**
@@ -20,7 +20,7 @@ public class MainAlgorithm {
     link.addLast(1);
     link.addLast(3);
     link.addLast(6);
-    ListNote listNote = reverseListNode(link.getListLink());
+    ListNode listNote = reverseListNode(link.getListLink());
     while (listNote != null) {
       System.out.println(listNote.getData());
       listNote = listNote.next;
@@ -28,23 +28,23 @@ public class MainAlgorithm {
   }
 
   // 指针法
-  private static ListNote reverseListNode2(ListNote listNote) {
+  private static ListNode reverseListNode2(ListNode listNote) {
     // 声明的头指针
-    ListNote head = listNote;
+    ListNode head = listNote;
     // 申明一个尾指针
-    ListNote tail = listNote;
+    ListNode tail = listNote;
     // 声明一个next指针
-    ListNote next = listNote.next;
+    ListNode next = listNote.next;
     // 计算链表的长度
     int size = 0;
-    ListNote temp = listNote;
+    ListNode temp = listNote;
     while (temp != null) {
       size++;
       temp = temp.next;
     }
     while (size > 1) {
       // 缓存一个next
-      ListNote nextNext = next.next;
+      ListNode nextNext = next.next;
       // 更改next的next指针
       next.next = head;// 反向了
       // 移动head指针的指向
@@ -59,20 +59,20 @@ public class MainAlgorithm {
   }
 
   // 数组法
-  private static ListNote reverseListNode(ListNote listNote) {
+  private static ListNode reverseListNode(ListNode listNote) {
     // 翻转一个链表
-    ListNote tempNode = listNote;
+    ListNode tempNode = listNote;
     // 把链表的值都放入List集合里面
     // 通过翻转数组来翻转集合
-    List<ListNote> list = new ArrayList<>();
+    List<ListNode> list = new ArrayList<>();
     while (tempNode != null) {
       list.add(tempNode);
       tempNode = tempNode.next;
     }
-    ListNote headNode = null;
+    ListNode headNode = null;
     for (int i = list.size() - 1; i >= 0; i--) {
       if (headNode == null) {
-        headNode = new ListNote();
+        headNode = new ListNode();
         headNode = list.get(i);
         headNode.next = list.get(i - 1);
       } else {

@@ -8,12 +8,12 @@ package D链表.A001用数组实现一个链表;
  * Update: <br>
  */
 public class MyListLink {
-  private ListNote first;
-  private ListNote last;
+  private ListNode first;
+  private ListNode last;
   private int size;
 
   public void addLast(int value) {
-    ListNote listNote = new ListNote();
+    ListNode listNote = new ListNode();
     listNote.setData(value);
     if (first == null) {
       first = listNote;
@@ -24,7 +24,7 @@ public class MyListLink {
     size++;
   }
 
-  public ListNote getListLink() {
+  public ListNode getListLink() {
     return first;
   }
 }

@@ -14,7 +14,7 @@ public class MainAlgorithm {
     listLink.addLast(3);
     listLink.addLast(2);
     listLink.addLast(11);
-    ListNote headnode = listLink.getListLink();
+    ListNode headnode = listLink.getListLink();
     while (headnode != null) {
       System.out.println(headnode.data);
       headnode = headnode.next;

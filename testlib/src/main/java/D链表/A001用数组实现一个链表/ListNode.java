@@ -7,19 +7,19 @@ package D链表.A001用数组实现一个链表;
  * Version: V1.0.0<br>
  * Update: <br>
  */
-public class ListNote {
+public class ListNode {
   public int data;
-  public ListNote next;
+  public ListNode next;
 
-  public ListNote(int val) {
+  public ListNode(int val) {
     this.data = val;
   }
 
-  public ListNote() {
+  public ListNode() {
     this.data = data;
   }
 
-  public void setNext(ListNote next) {
+  public void setNext(ListNode next) {
     this.next = next;
   }
 
@@ -31,7 +31,7 @@ public class ListNote {
     this.data = data;
   }
 
-  public ListNote getNext() {
+  public ListNode getNext() {
     return next;
   }
 }

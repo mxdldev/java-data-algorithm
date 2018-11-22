@@ -1,7 +1,7 @@
 package D链表.A002检查链表有没有环;
 
 import java.util.HashSet;
-import D链表.A001用数组实现一个链表.ListNote;
+import D链表.A001用数组实现一个链表.ListNode;
 
 /**
  * Description: <检查链表有没有环><br>
@@ -12,10 +12,10 @@ import D链表.A001用数组实现一个链表.ListNote;
  */
 public class MainAgorithm {
   public static void main(String[] args) {
-    ListNote listNote = new ListNote(0);
-    ListNote listNote1 = new ListNote(1);
-    ListNote listNote2 = new ListNote(2);
-    ListNote listNote3 = new ListNote(3);
+    ListNode listNote = new ListNode(0);
+    ListNode listNote1 = new ListNode(1);
+    ListNode listNote2 = new ListNode(2);
+    ListNode listNote3 = new ListNode(3);
 
     listNote.setNext(listNote1);
     listNote1.setNext(listNote2);
@@ -26,9 +26,9 @@ public class MainAgorithm {
   }
 
   // 计数法
-  public static boolean checkLoop1(ListNote listNote) {
-    HashSet<ListNote> hashSet = new HashSet<>();
-    ListNote temp = listNote;
+  public static boolean checkLoop1(ListNode listNote) {
+    HashSet<ListNode> hashSet = new HashSet<>();
+    ListNode temp = listNote;
     while (temp != null) {
       if (hashSet.contains(temp)) {
         return true;
@@ -41,9 +41,9 @@ public class MainAgorithm {
   }
 
   // 差速发
-  private static boolean checkLoop(ListNote listNote) {
-    ListNote slow = listNote;
-    ListNote fast = listNote;
+  private static boolean checkLoop(ListNode listNote) {
+    ListNode slow = listNote;
+    ListNode fast = listNote;
     while (fast != null && fast.next != null) {
       fast = fast.next.next;
       slow = slow.next;

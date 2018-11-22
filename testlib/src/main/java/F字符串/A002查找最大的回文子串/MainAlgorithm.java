@@ -1,7 +1,6 @@
 package F字符串.A002查找最大的回文子串;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import D链表.A001用数组实现一个链表.ListNode;
 
 /**
  * Description: <查找最大的回文子串><br>
@@ -15,10 +14,9 @@ public class MainAlgorithm {
     String str = "abc3220440223123131abcdefgha101ahgfedcba";
     String s = getLongtext(str);
     System.out.println(s);
-    // getStr(str);
   }
 
-  public static  String getLongtext(String str) {
+  public static String getLongtext(String str) {
     if (str == null || str.length() < 2) {
       return str;
     }
@@ -53,12 +51,35 @@ public class MainAlgorithm {
             longtxt = str.substring(i, j + 1);
             maxlen = len;
           }
-        }else{
+        } else {
           arr[i][j] = false;
         }
       }
     }
     return longtxt;
+  }
+
+
+  public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+
+    ListNode head = new ListNode(0); // 创建一个头结点，最后还要删除掉
+    ListNode tail = head;
+
+    while (l1 != null && l2 != null) {
+      if (l1.data <= l2.data) {
+        tail.next = l1;
+        l1 = l1.next;
+      } else {
+        tail.next = l2;
+        l2 = l2.next;
+      }
+
+      tail = tail.next; // 移动到新的尾结点
+    }
+
+    tail.next = (l1 != null ? l1 : l2);
+
+    return head.next; // head的下一个节点是第一个数据结点
   }
 
 }

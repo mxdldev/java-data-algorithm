@@ -1,6 +1,6 @@
 package D链表.A003查找有环链表的入口节点;
 
-import D链表.A001用数组实现一个链表.ListNote;
+import D链表.A001用数组实现一个链表.ListNode;
 
 /**
  * Description: <查找有环链表的入口节点><br>
@@ -11,24 +11,24 @@ import D链表.A001用数组实现一个链表.ListNote;
  */
 public class MainAgorithm {
   public static void main(String[] args) {
-    ListNote listNote = new ListNote(0);
-    ListNote listNote1 = new ListNote(1);
-    ListNote listNote2 = new ListNote(2);
-    ListNote listNote3 = new ListNote(3);
+    ListNode listNote = new ListNode(0);
+    ListNode listNote1 = new ListNode(1);
+    ListNode listNote2 = new ListNode(2);
+    ListNode listNote3 = new ListNode(3);
 
     listNote.setNext(listNote1);
     listNote1.setNext(listNote2);
     listNote2.setNext(listNote3);
     listNote3.setNext(listNote1);
-    ListNote firstNode = getFirstNode(listNote);
+    ListNode firstNode = getFirstNode(listNote);
     System.out.println(firstNode.data);
   }
 
   // 查找有环链表的入口节点
-  private static ListNote getFirstNode(ListNote listNote) {
+  private static ListNode getFirstNode(ListNode listNote) {
     // 如果链表有环，请找到其入口节点
-    ListNote slow = listNote;
-    ListNote fast = listNote;
+    ListNode slow = listNote;
+    ListNode fast = listNote;
     while (fast != null && fast.next != null) {
       slow = slow.next;
       fast = fast.next.next;

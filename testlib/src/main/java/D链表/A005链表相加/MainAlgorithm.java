@@ -1,8 +1,6 @@
 package D链表.A005链表相加;
 
-import org.w3c.dom.NodeList;
-
-import D链表.A001用数组实现一个链表.ListNote;
+import D链表.A001用数组实现一个链表.ListNode;
 import D链表.A001用数组实现一个链表.MyListLink;
 
 /**
@@ -25,8 +23,8 @@ public class MainAlgorithm {
     link1.addLast(5);
     link1.addLast(9);
 
-    ListNote listNote = addLink(link, link1);
-    ListNote listLink2 = listNote;
+    ListNode listNote = addLink(link, link1);
+    ListNode listLink2 = listNote;
     while (listLink2 != null) {
       System.out.println(listLink2.data);
       listLink2 = listLink2.next;
@@ -37,13 +35,13 @@ public class MainAlgorithm {
   //2.转化为数字相加
   //3.将结果转化为字符串
   //4.将字符串转换为链表输出
-  private static ListNote addLink(MyListLink link, MyListLink link1) {
-    ListNote listLink = link.getListLink();
-    ListNote listLink1 = link1.getListLink();
+  private static ListNode addLink(MyListLink link, MyListLink link1) {
+    ListNode listLink = link.getListLink();
+    ListNode listLink1 = link1.getListLink();
 
     // 翻转链表listLink; 指针翻转
-    ListNote listNote = reverseLink(listLink);
-    ListNote listNote1 = reverseLink(listLink1);
+    ListNode listNote = reverseLink(listLink);
+    ListNode listNote1 = reverseLink(listLink1);
 
     StringBuilder s = new StringBuilder();
     while (listNote != null) {
@@ -67,12 +65,12 @@ public class MainAlgorithm {
     return myListLink.getListLink();
   }
 
-  private static ListNote reverseLink(ListNote listLink) {
-    ListNote first = listLink;
-    ListNote last = listLink;
-    ListNote next = listLink.next;
+  private static ListNode reverseLink(ListNode listLink) {
+    ListNode first = listLink;
+    ListNode last = listLink;
+    ListNode next = listLink.next;
     while (next != null) {
-      ListNote temp = next.next;
+      ListNode temp = next.next;
       next.setNext(first);// 翻转节点
       first = next;// 头指针移位
       next = temp;// next节点移动位置

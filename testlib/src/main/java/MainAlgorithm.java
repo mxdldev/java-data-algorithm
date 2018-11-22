@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Arrays;
 import java.util.Iterator;
-import D链表.A001用数组实现一个链表.ListNote;
+import D链表.A001用数组实现一个链表.ListNode;
 import E树.A001求二叉树的节点数高遍历.TreeNode;
 
 /**
@@ -79,23 +79,23 @@ public class MainAlgorithm {
   }
 
   // 翻转一个链表：指针法
-  private static ListNote reverseListNode2(ListNote listNote) {
+  private static ListNode reverseListNode2(ListNode listNote) {
     // 声明的头指针
-    ListNote head = listNote;
+    ListNode head = listNote;
     // 申明一个尾指针
-    ListNote tail = listNote;
+    ListNode tail = listNote;
     // 声明一个next指针
-    ListNote next = listNote.next;
+    ListNode next = listNote.next;
     // 计算链表的长度
     int size = 0;
-    ListNote temp = listNote;
+    ListNode temp = listNote;
     while (temp != null) {
       size++;
       temp = temp.next;
     }
     while (size > 1) {
       // 缓存一个next
-      ListNote nextNext = next.next;
+      ListNode nextNext = next.next;
       // 更改next的next指针
       next.next = head;// 反向了
       // 移动head指针的指向
@@ -110,20 +110,20 @@ public class MainAlgorithm {
   }
 
   // 翻转一个链表：数组法
-  private static ListNote reverseListNode(ListNote listNote) {
+  private static ListNode reverseListNode(ListNode listNote) {
     // 翻转一个链表
-    ListNote tempNode = listNote;
+    ListNode tempNode = listNote;
     // 把链表的值都放入List集合里面
     // 通过翻转数组来翻转集合
-    List<ListNote> list = new ArrayList<>();
+    List<ListNode> list = new ArrayList<>();
     while (tempNode != null) {
       list.add(tempNode);
       tempNode = tempNode.next;
     }
-    ListNote headNode = null;
+    ListNode headNode = null;
     for (int i = list.size() - 1; i >= 0; i--) {
       if (headNode == null) {
-        headNode = new ListNote();
+        headNode = new ListNode();
         headNode = list.get(i);
         headNode.next = list.get(i - 1);
       } else {
@@ -138,10 +138,10 @@ public class MainAlgorithm {
   }
 
   // 查找有环链表的入口节点
-  private static ListNote getFirstNode(ListNote listNote) {
+  private static ListNode getFirstNode(ListNode listNote) {
     // 如果链表有环，请找到其入口节点
-    ListNote slow = listNote;
-    ListNote fast = listNote;
+    ListNode slow = listNote;
+    ListNode fast = listNote;
     while (fast != null && fast.next != null) {
       slow = slow.next;
       fast = fast.next.next;
@@ -167,9 +167,9 @@ public class MainAlgorithm {
   }
 
   // 计数法
-  public static boolean checkLoop1(ListNote listNote) {
-    HashSet<ListNote> hashSet = new HashSet<>();
-    ListNote temp = listNote;
+  public static boolean checkLoop1(ListNode listNote) {
+    HashSet<ListNode> hashSet = new HashSet<>();
+    ListNode temp = listNote;
     while (temp != null) {
       if (hashSet.contains(temp)) {
         return true;
@@ -182,9 +182,9 @@ public class MainAlgorithm {
   }
 
   // 判断一个链表有没有环:差速发
-  private static boolean checkLoop(ListNote listNote) {
-    ListNote slow = listNote;
-    ListNote fast = listNote;
+  private static boolean checkLoop(ListNode listNote) {
+    ListNode slow = listNote;
+    ListNode fast = listNote;
     while (fast != null && fast.next != null) {
       fast = fast.next.next;
       slow = slow.next;
