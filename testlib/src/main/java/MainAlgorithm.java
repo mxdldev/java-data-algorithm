@@ -15,6 +15,14 @@ import E树.A001求二叉树的节点数高遍历.TreeNode;
  */
 public class MainAlgorithm {
   public static void main(String[] args) {
+    byte b = 112;
+    char c = '4';
+    short s = 12333;
+    int i = 1231111111;
+    long l = 1999999991133345353L;
+    float f = 111.123f;
+    double d = 223123.12313132d;
+    boolean b1 = true;
     TreeNode treeNode = new TreeNode(0);
     TreeNode treeNode1 = new TreeNode(1);
     TreeNode treeNode2 = new TreeNode(2);
