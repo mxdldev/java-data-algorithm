@@ -24,7 +24,7 @@ public class MainAlgorithm {
 
     treeNode3.setLeftNote(treeNode5);
 
-    System.out.println(getTreeHeight(treeNode));
+    printTreeNote(treeNode);
   }
 
   // 求这个二叉树的高
@@ -42,13 +42,14 @@ public class MainAlgorithm {
     }
   }
 
-  // 求这个二叉树的高
+  // 遍历二叉树的所有节点
   public static void printTreeNote(TreeNode treeNode) {
     if (treeNode == null) {
       return;
     } else {
       System.out.println(treeNode.getValue());
       printTreeNote(treeNode.getLeftNote());
+      // System.out.println(treeNode.getValue());//中序遍历
       printTreeNote(treeNode.getRightNote());
     }
   }
