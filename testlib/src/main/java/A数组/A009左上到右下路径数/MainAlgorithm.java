@@ -1,4 +1,4 @@
-package A数组.A009唯一路径;
+package A数组.A009左上到右下路径数;
 
 /**
  * Description: <在一个m*n的矩形方格中， 机器人在最左上的格子里，一次只能挪动一步，只能往右往下移动 目标地点在最右下方的方格里，问共有几条路径 ><br>
@@ -12,6 +12,8 @@ public class MainAlgorithm {
 
     int path = getPath(3, 3);
     System.out.println(path);
+    int[][] arr = new int[2][3];
+    System.out.println("length:"+arr.length);
   }
 
   // 动态规划问题
