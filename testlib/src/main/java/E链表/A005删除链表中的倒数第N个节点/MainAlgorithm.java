@@ -1,4 +1,4 @@
-package E链表.A007删除链表中的倒数第N个节点;
+package E链表.A005删除链表中的倒数第N个节点;
 
 import E链表.A001实现一个链表.ListNode;
 import E链表.A001实现一个链表.MyListLink;
