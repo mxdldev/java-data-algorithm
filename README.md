@@ -26,6 +26,6 @@
 ```
   var geduo_83 = {
     nickName  : "geduo_83",
-    site : "http://www.github.com/geduo83"
+    site : "http://www.weibo.com/geduo83"
   }
 ```
