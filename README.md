@@ -10,8 +10,12 @@
 7. [求从左上到右下的路径数](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A007%E5%B7%A6%E4%B8%8A%E5%88%B0%E5%8F%B3%E4%B8%8B%E8%B7%AF%E5%BE%84%E6%95%B0/MainAlgorithm.java)
 8. [求左上到右下的路径最小值](https://github.com/geduo83/algorithm/tree/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A008%E5%B7%A6%E4%B8%8A%E5%88%B0%E5%8F%B3%E4%B8%8B%E8%B7%AF%E5%BE%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC)
 ## 集合
+1. [自定义实现一个ArrayList](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/B%E9%9B%86%E5%90%88/A001%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAArrayList/MyArrayList.java)
+2. [删除集合中的偶数](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/B%E9%9B%86%E5%90%88/A002%E5%88%A0%E9%99%A4%E9%9B%86%E5%90%88%E4%B8%AD%E7%9A%84%E5%81%B6%E6%95%B0/MainAlgorithm.java)
 ## 散列表
 ## 栈队列
+1. [自定义实现一个栈](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/D%E6%A0%88%E9%98%9F%E5%88%97/A001%E7%94%A8%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%A0%88/MyStack.java)
+2. [自定义实现一个队列](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/D%E6%A0%88%E9%98%9F%E5%88%97/A002%E7%94%A8%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%9F%E5%88%97/MyQueue.java)
 ## 链表
 ## 树
 ## 常见错误：
