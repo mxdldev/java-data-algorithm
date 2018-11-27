@@ -3,7 +3,7 @@
 ## 数组
 1. [冒泡排序](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A001%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/MainAlgorithm.java)
 2. [选择排序](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A002%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/MainAlgorithm.java)
-3. [桶排序]（https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A003%E6%A1%B6%E6%8E%92%E5%BA%8F/MainAlgorithm.java）
+3. [桶排序](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A003%E6%A1%B6%E6%8E%92%E5%BA%8F/MainAlgorithm.java)
 4. [数组中是否有重复元素](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A004%E6%95%B0%E7%BB%84%E6%98%AF%E5%90%A6%E6%9C%89%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/MainAlgorithm.java)
 5. [删除数组中的重复元素](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A005%E5%88%A0%E9%99%A4%E6%95%B0%E7%BB%84%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/MainAgorithm.java)
 6. [两数求和](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A006%E4%B8%A4%E6%95%B0%E6%B1%82%E5%92%8C/MainAlgorithm.java)
