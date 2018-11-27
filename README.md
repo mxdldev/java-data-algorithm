@@ -15,6 +15,12 @@
 ### 4. 二叉树完全相等
 * 最后的return 注意额，值判断和递归在一行上  
 
+## 问题反馈
+在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+* QQ：303704981
+* email：[geduo_83@163.com](geduo_83@163.com)
+* weibo：[geduo_83](http://www.weibo.com/geduo83)
+
 ## 关于作者
 ```
   var ihubo = {
