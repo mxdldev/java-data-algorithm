@@ -23,7 +23,7 @@
 
 ## 关于作者
 ```
-  var ihubo = {
+  var geduo_83 = {
     nickName  : "geduo_83",
     site : "http://www.github.com/geduo83"
   }
