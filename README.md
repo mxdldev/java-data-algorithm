@@ -1,5 +1,5 @@
 # 算法宝典
-***注意事项：所有的代码在algorithm/testlib/src/main/java/路径下***
+**注意事项：所有的代码在algorithm/testlib/src/main/java/路径下**
 ## 数组
 1. [冒泡排序](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A001%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/MainAlgorithm.java)
 2. [选择排序](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A002%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/MainAlgorithm.java)
