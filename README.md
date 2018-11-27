@@ -1,6 +1,5 @@
 # 算法宝典
 **注意事项：所有的代码在algorithm/testlib/src/main/java/路径下**
-![数据结构](https://github.com/geduo83/algorithm/blob/master/app/src/main/res/drawable/data_structs.jpeg)
 ## 数组
 1. [冒泡排序](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A001%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/MainAlgorithm.java)
 2. [选择排序](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/A%E6%95%B0%E7%BB%84/A002%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/MainAlgorithm.java)
@@ -33,8 +32,8 @@
 1. [查找最大的回文字符串](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/G%E5%AD%97%E7%AC%A6%E4%B8%B2/A002%E6%9F%A5%E6%89%BE%E6%9C%80%E5%A4%A7%E7%9A%84%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/MainAlgorithm.java)
 ## 基本类型
 1. [翻转一个整形数字](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/H%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/A001%E7%BF%BB%E8%BD%AC%E4%B8%80%E4%B8%AA%E6%95%B4%E6%95%B0/MainAlgorithm.java)
+![数据结构](https://github.com/geduo83/algorithm/blob/master/app/src/main/res/drawable/data_structs.jpeg)
 ## 常见错误：
-
 ### 1. 查找最大回文字符串：
 * 相邻字符是回文的判断逻辑不对
 * 长度为2个以上串的内循环注意事项（有两个指针）
