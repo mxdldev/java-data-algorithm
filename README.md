@@ -17,7 +17,21 @@
 1. [自定义实现一个栈](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/D%E6%A0%88%E9%98%9F%E5%88%97/A001%E7%94%A8%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%A0%88/MyStack.java)
 2. [自定义实现一个队列](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/D%E6%A0%88%E9%98%9F%E5%88%97/A002%E7%94%A8%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%9F%E5%88%97/MyQueue.java)
 ## 链表
+1. [实现一个链表](https://github.com/geduo83/algorithm/tree/master/testlib/src/main/java/E%E9%93%BE%E8%A1%A8/A001%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%93%BE%E8%A1%A8)
+2. [检查链表有没有环](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/E%E9%93%BE%E8%A1%A8/A002%E6%A3%80%E6%9F%A5%E9%93%BE%E8%A1%A8%E6%9C%89%E6%B2%A1%E6%9C%89%E7%8E%AF/MainAgorithm.java)
+3. [查找有环链表的入口节点](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/E%E9%93%BE%E8%A1%A8/A003%E6%9F%A5%E6%89%BE%E6%9C%89%E7%8E%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E5%85%A5%E5%8F%A3%E8%8A%82%E7%82%B9/MainAgorithm.java)
+4. [翻转一个链表](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/E%E9%93%BE%E8%A1%A8/A004%E7%BF%BB%E8%BD%AC%E4%B8%80%E4%B8%AA%E9%93%BE%E8%A1%A8/MainAlgorithm.java)
+5. [删除链表倒数第N个节点](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/E%E9%93%BE%E8%A1%A8/A005%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9/MainAlgorithm.java)
+6. [合并两个有序链表](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/E%E9%93%BE%E8%A1%A8/A006%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%A5%BD%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/MainAlgorithm.java)
 ## 树
+1. [求二叉树的高、节点数、中序遍历](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/F%E6%A0%91/A001%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%AB%98%E8%8A%82%E7%82%B9%E6%95%B0%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/MainAlgorithm.java)
+2. [判断两个二叉树是否完全相同](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/F%E6%A0%91/A002%E5%88%A4%E6%96%AD%E4%B8%A4%E9%A2%97%E4%BA%8C%E5%8F%89%E6%A0%91%E6%98%AF%E5%90%A6%E5%AE%8C%E5%85%A8%E7%9B%B8%E5%90%8C/MainAlgorithm.java)
+3. [判断一个二叉树是否是对称二叉树](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/F%E6%A0%91/A003%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%E6%98%AF%E5%90%A6%E6%98%AF%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/MainAlgorithm.java)
+## 字符串
+1. [查找最大的非重复字符串](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/G%E5%AD%97%E7%AC%A6%E4%B8%B2/A001%E6%9F%A5%E6%89%BE%E6%9C%80%E5%A4%A7%E7%9A%84%E9%9D%9E%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E4%B8%B2/MainAlgorithm.java)
+1. [查找最大的回文字符串](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/G%E5%AD%97%E7%AC%A6%E4%B8%B2/A002%E6%9F%A5%E6%89%BE%E6%9C%80%E5%A4%A7%E7%9A%84%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/MainAlgorithm.java)
+## 基本类型
+1. [翻转一个整形数字](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/H%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/A001%E7%BF%BB%E8%BD%AC%E4%B8%80%E4%B8%AA%E6%95%B4%E6%95%B0/MainAlgorithm.java)
 ## 常见错误：
 
 ### 1. 查找最大回文字符串：
