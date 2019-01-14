@@ -9,7 +9,7 @@ package A数组.A002选择排序;
  */
 public class MainAlgorithm {
   public static void main(String[] arg) {
-    int[] arr = {1, 3, 10, 1, 34, 5, 21};
+    int[] arr = {3, 10, 1, 34, 5, 21};
     sortChange(arr);
     int i = 0;
     while (i < arr.length) {
@@ -21,7 +21,7 @@ public class MainAlgorithm {
   // 选择排序，选择第一个元素和剩下的n-1个比较
   private static void sortChange(int[] arr) {
     // 第一轮确定第一个元素，第二轮确定第二个元素
-    for (int i = 0; i < arr.length; i++) {
+    for (int i = 0; i < arr.length - 1; i++) {
       for (int j = i + 1; j < arr.length; j++) {
         // 选择第一i个元素和剩余的元素进行比较
         if (arr[i] > arr[j]) {
