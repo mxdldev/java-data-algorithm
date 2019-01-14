@@ -63,4 +63,17 @@ public class MainAlgorithm {
     }
     return null;
   }
+  //方法2：
+  public static int[] getSumIndex(int[] arr, int sum) {
+    for (int i = 0; i < arr.length; i++) {
+      for (int j = i + 1; j < arr.length; j++) {
+        if (arr[i] + arr[j] == sum) {
+          System.out.println("i:" + i + ";j:" + j);
+          return new int[]{i,j};
+        }
+      }
+    }
+    return null;
+  }
+
 }
