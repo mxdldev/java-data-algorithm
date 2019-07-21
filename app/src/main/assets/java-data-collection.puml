@@ -1,0 +1,62 @@
+@startuml
+
+Interface Iterable{
+    Iterator<T> iterator()
+}
+Interface Collection extends Iterable{
+    boolean	add(E e)
+    boolean	remove(Object o)
+    void clear()
+    int size()
+}
+interface List extends Collection{
+    E get(int index)
+    void add(int index, E element)
+}
+Interface Set extends Collection{
+     boolean	add(E e)
+     boolean	remove(Object o)
+}
+Interface Queue  extends Collection{
+    boolean	add(E e)
+    E element()
+    boolean	offer(E e)
+    E peek()
+    E poll()
+    E remove()
+}
+Interface BlockingQueue extends Queue{
+    void put(E e)
+    boolean	remove(Object o)
+    E take()
+}
+Interface Deque extends Queue{
+   boolean offerFirst(e)
+   boolean offerLast(e)
+   E pollFirst()
+   E pollLast()
+   E peekFirst()
+   E peekLast()
+}
+class ArrayList implements List{
+}
+class Vector implements List{
+}
+class LinkedList implements List, Deque{
+}
+class Stack extends Vector{
+}
+class HashSet implements Set{
+
+}
+class TreeSet implements Set{
+}
+interface BlockingDeque extends BlockingQueue, Deque{
+}
+class LinkedBlockingQueue implements BlockingQueue{
+}
+class PriorityBlockingQueue implements BlockingQueue{
+}
+class LinkedBlockingDeque implements BlockingDeque{
+}
+@enduml

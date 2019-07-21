@@ -1,0 +1,27 @@
+@startuml
+Interface Map{
+    void clear()
+    Set<Map.Entry<K,V>>	entrySet()
+    Set<K>	keySet()
+    V get(Object key)
+    boolean	isEmpty()
+    V put(K key, V value)
+    V remove(Object key)
+    int	size()
+    Collection<V> values()
+}
+
+class HashMap implements Map{
+}
+class Hashtable implements Map{
+}
+class LinkedHashMap extends HashMap{
+}
+interface SortedMap extends Map{
+}
+
+interface NavigableMap extends SortedMap{
+}
+class TreeMap implements NavigableMap{
+}
+@enduml
