@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Description: <自定义实现一个ArrayList><br>
- * Author: gxl<br>
+ * Author: mxdl<br>
  * Date: 2018/11/19<br>
  * Version: V1.0.0<br>
  * Update: <br>

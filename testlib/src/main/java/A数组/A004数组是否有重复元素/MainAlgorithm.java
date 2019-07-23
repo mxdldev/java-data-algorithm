@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 /**
  * Description: <数组是否有重复元素><br>
- * Author: gxl<br>
+ * Author: mxdl<br>
  * Date: 2018/11/21<br>
  * Version: V1.0.0<br>
  * Update: <br>

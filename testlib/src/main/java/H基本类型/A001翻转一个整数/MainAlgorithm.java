@@ -2,7 +2,7 @@ package H基本类型.A001翻转一个整数;
 
 /**
  * Description: <翻转一个整数><br>
- * Author:      gxl<br>
+ * Author:      mxdl<br>
  * Date:        2018/11/22<br>
  * Version:     V1.0.0<br>
  * Update:     <br>

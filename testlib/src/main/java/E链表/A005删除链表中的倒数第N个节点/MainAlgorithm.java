@@ -5,7 +5,7 @@ import E链表.A001实现一个链表.MyListLink;
 
 /**
  * Description: <删除链表中的倒数第N个元素><br>
- * Author:      gxl<br>
+ * Author:      mxdl<br>
  * Date:        2018/11/23<br>
  * Version:     V1.0.0<br>
  * Update:     <br>

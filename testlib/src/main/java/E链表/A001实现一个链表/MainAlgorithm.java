@@ -2,7 +2,7 @@ package E链表.A001实现一个链表;
 
 /**
  * Description: <用数组实现一个链表><br>
- * Author: gxl<br>
+ * Author: mxdl<br>
  * Date: 2018/11/21<br>
  * Version: V1.0.0<br>
  * Update: <br>

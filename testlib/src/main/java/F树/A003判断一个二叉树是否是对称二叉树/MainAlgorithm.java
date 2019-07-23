@@ -4,7 +4,7 @@ import F树.A001求二叉树的高节点数中序遍历.TreeNode;
 
 /**
  * Description: <一个二叉树是否是对称二叉树><br>
- * Author: gxl<br>
+ * Author: mxdl<br>
  * Date: 2018/11/23<br>
  * Version: V1.0.0<br>
  * Update: <br>

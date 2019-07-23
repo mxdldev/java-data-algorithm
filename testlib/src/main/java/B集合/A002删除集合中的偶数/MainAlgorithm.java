@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 /**
  * Description: <删除集合中的偶数><br>
- * Author: gxl<br>
+ * Author: mxdl<br>
  * Date: 2018/11/21<br>
  * Version: V1.0.0<br>
  * Update: <br>

@@ -5,7 +5,7 @@ import E链表.A001实现一个链表.ListNode;
 
 /**
  * Description: <检查链表有没有环><br>
- * Author: gxl<br>
+ * Author: mxdl<br>
  * Date: 2018/11/21<br>
  * Version: V1.0.0<br>
  * Update: <br>

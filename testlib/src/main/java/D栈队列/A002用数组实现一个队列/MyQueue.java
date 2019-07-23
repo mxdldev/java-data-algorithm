@@ -2,7 +2,7 @@ package D栈队列.A002用数组实现一个队列;
 
 /**
  * Description: <><br>
- * Author: gxl<br>
+ * Author: mxdl<br>
  * Date: 2018/11/19<br>
  * Version: V1.0.0<br>
  * Update: <br>

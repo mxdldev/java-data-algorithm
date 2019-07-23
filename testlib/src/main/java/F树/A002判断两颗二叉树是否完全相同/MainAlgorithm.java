@@ -4,7 +4,7 @@ import F树.A001求二叉树的高节点数中序遍历.TreeNode;
 
 /**
  * Description: <判断两颗二叉树是否完全相同><br>
- * Author: gxl<br>
+ * Author: mxdl<br>
  * Date: 2018/11/23<br>
  * Version: V1.0.0<br>
  * Update: <br>

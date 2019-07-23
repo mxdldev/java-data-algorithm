@@ -2,7 +2,7 @@ package A数组.A007左上到右下路径数;
 
 /**
  * Description: <在一个m*n的矩形方格中， 机器人在最左上的格子里，一次只能挪动一步，只能往右往下移动 目标地点在最右下方的方格里，问共有几条路径 ><br>
- * Author: gxl<br>
+ * Author: mxdl<br>
  * Date: 2018/11/23<br>
  * Version: V1.0.0<br>
  * Update: <br>

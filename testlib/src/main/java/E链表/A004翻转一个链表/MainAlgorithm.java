@@ -8,7 +8,7 @@ import E链表.A001实现一个链表.MyListLink;
 
 /**
  * Description: <翻转一个链表><br>
- * Author: gxl<br>
+ * Author: mxdl<br>
  * Date: 2018/11/21<br>
  * Version: V1.0.0<br>
  * Update: <br>

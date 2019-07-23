@@ -2,7 +2,7 @@ package G字符串.A001查找最大的非重复字符串;
 
 /**
  * Description: <查找最大的非重复字符串><br>
- * Author:      gxl<br>
+ * Author:      mxdl<br>
  * Date:        2018/11/21<br>
  * Version:     V1.0.0<br>
  * Update:     <br>
