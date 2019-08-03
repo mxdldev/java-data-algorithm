@@ -11,7 +11,7 @@ import java.util.Arrays;
  */
 public class MainAgorithm {
   public static void main(String[] arg) {
-    int[] arr = {1, 3, 10, 1, 34, 5, 21};
+    int[] arr = {1, 1, 10, 1, 34, 5, 21};
     arr = removeRepeat(arr);
     int i = 0;
     while (i < arr.length) {
