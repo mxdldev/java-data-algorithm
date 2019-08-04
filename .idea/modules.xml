@@ -5,11 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/YeswayTest.iml" filepath="$PROJECT_DIR$/YeswayTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithm.iml" filepath="$PROJECT_DIR$/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-algorithm.iml" filepath="$PROJECT_DIR$/java-algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-data-algorithm.iml" filepath="$PROJECT_DIR$/java-data-algorithm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java-data-algorithm.iml" filepath="$PROJECT_DIR$/java-data-algorithm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/testlib/testlib.iml" filepath="$PROJECT_DIR$/testlib/testlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/testlib/testlib.iml" filepath="$PROJECT_DIR$/testlib/testlib.iml" />
     </modules>
   </component>

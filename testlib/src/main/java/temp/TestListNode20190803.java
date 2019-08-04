@@ -11,10 +11,10 @@ import java.util.List;
  */
 public class TestListNode20190803 {
     public static void main(String[] args) {
-        ListNode head = new ListNode(0);
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
+        ListNode head = new ListNode(1);
+        ListNode node1 = new ListNode(2);
+        ListNode node2 = new ListNode(3);
+        ListNode node3 = new ListNode(4);
         head.next = node1;
         node1.next = node2;
         node2.next = node3;
@@ -38,13 +38,13 @@ public class TestListNode20190803 {
 //        System.out.println("new ListNode:" + builder.toString());
         System.out.println("--------------------------");
         //4.删除链表当中的倒数第n个节点
-        ListNode node = delteNode(head, 3);
+        ListNode node = delteNode(head, 4);
         StringBuilder builder = new StringBuilder();
         while (node != null) {
             builder.append(node.val).append(",");
             node = node.next;
         }
-        System.out.println("new ListNode:" + builder.toString());
+        System.out.println("delteNode ListNode:" + builder.toString());
         //System.out.println("value:"+node.val);
         System.out.println("--------------------------");
 
@@ -137,13 +137,15 @@ public class TestListNode20190803 {
         //首先找到正数第n个节点
         ListNode pa = listNode;
         ListNode pb = listNode;
-        int i = 0;
-        while (i < n) {
+        int i = 1;
+        while (i <= n) {
             pa = pa.next;
             i++;
         }
-
-        while (pa.next != null) {
+        if(pa == null){
+            return listNode.next;
+        }
+         while ( pa.next != null) {
             pa = pa.next;
             pb = pb.next;
         }
