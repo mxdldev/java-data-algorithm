@@ -44,4 +44,25 @@ public class MainAlgorithm {
         pb.next = pb.next.next;
         return head;
     }
+    //　定义3个指针，分别指向当前遍历到的结点、它的前一个结点及后一个结点。在遍历过程中，首先记录当前节点的后一个节点，然后将当前节点的后一个节点指向前一个节点，其次前一个节点再指向当前节点，最后再将当前节点指向最初记录的后一个节点，如此反复，直到当前节点的后一个节点为NULL时，则代表当前节点时反转后的头结点了。
+    public static temp.ListNode reversListNote(temp.ListNode listNode) {
+        temp.ListNode headNode = null;
+        temp.ListNode currNode = listNode;
+        temp.ListNode preNdoe = null;
+        while (currNode != null) {
+            //记录当前节点的下一个节点
+            temp.ListNode nextNode = currNode.next;
+            if (nextNode == null) {
+                headNode = currNode;
+            }
+            //当前节点的下一个节点指向前一个节点
+            currNode.next = preNdoe;
+            //前一个节点指向当前节点
+            preNdoe = currNode;
+            //当前节点指向下一个节点
+            currNode = nextNode;
+        }
+        return headNode;
+    }
+
 }
