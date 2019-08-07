@@ -1,0 +1,17 @@
+注意事项：
+1.判断有没有环
+结束条件：fast.next != null;
+
+2.删除倒数第n个节点
+有pa,pb 返回注意是 listNode
+
+5.合并两个有序链表
+有pa,pb，head，curr 注意返回的是head.next
+
+6.查找最大回文字符串
+原理明白，关键是三个三个取值 四个四个取值的循环写法要注意
+for(int len = 3; len <= str.length; len++){
+	for(int i = 0,j; (j = i+len-1)<str.length; i++){
+
+	}
+}
