@@ -11,7 +11,7 @@ import E链表.A001实现一个链表.ListNode;
  */
 public class MainAlgorithm {
   public static void main(String[] args) {
-    String str = "abc3220440223123131abcdefgha101ahgfedcba";
+    String str = "2112";
     String s = getLongtext(str);
     System.out.println(s);
   }
