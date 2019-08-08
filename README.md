@@ -23,6 +23,8 @@
 4. [翻转一个链表](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/E%E9%93%BE%E8%A1%A8/A004%E7%BF%BB%E8%BD%AC%E4%B8%80%E4%B8%AA%E9%93%BE%E8%A1%A8/MainAlgorithm.java)
 5. [删除链表倒数第N个节点](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/E%E9%93%BE%E8%A1%A8/A005%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9/MainAlgorithm.java)
 6. [合并两个有序链表](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/E%E9%93%BE%E8%A1%A8/A006%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%A5%BD%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/MainAlgorithm.java)
+7.[两个整数链表求和得到一个新的链表](https://github.com/mxdldev/java-data-algorithm/blob/master/testlib/src/main/java/E%E9%93%BE%E8%A1%A8/A007%E4%B8%A4%E4%B8%AA%E6%95%B4%E6%95%B0%E9%93%BE%E8%A1%A8%E6%B1%82%E5%92%8C%E5%BE%97%E5%88%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E9%93%BE%E8%A1%A8/MainAlgorithm.java)
+
 ## 树
 1. [求二叉树的高、节点数、中序遍历](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/F%E6%A0%91/A001%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%AB%98%E8%8A%82%E7%82%B9%E6%95%B0%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/MainAlgorithm.java)
 2. [判断两个二叉树是否完全相同](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/F%E6%A0%91/A002%E5%88%A4%E6%96%AD%E4%B8%A4%E9%A2%97%E4%BA%8C%E5%8F%89%E6%A0%91%E6%98%AF%E5%90%A6%E5%AE%8C%E5%85%A8%E7%9B%B8%E5%90%8C/MainAlgorithm.java)
