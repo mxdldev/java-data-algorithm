@@ -20,6 +20,7 @@ public class MainAlgorithm {
     }
     public static void main(String[] args){
         int[] arr = new int[]{4,3,5,6,1};
-        System.out.println(arr);
+        int maxArea = getMaxArea(arr);
+        System.out.println(maxArea);
     }
 }
