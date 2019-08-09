@@ -23,8 +23,9 @@ public class MainAlgorithm {
     treeNode1.setRightNote(treeNode4);
 
     treeNode3.setLeftNote(treeNode5);
+    treeNode3.setRightNote(treeNode2);
 
-    printTreeNote(treeNode);
+    inOrderTraversal(treeNode);
   }
 
   // 求这个二叉树的高
@@ -47,10 +48,20 @@ public class MainAlgorithm {
     if (treeNode == null) {
       return;
     } else {
-      System.out.println(treeNode.getValue());
+      // System.out.println(treeNode.getValue());
       printTreeNote(treeNode.getLeftNote());
-      // System.out.println(treeNode.getValue());//中序遍历
+      System.out.println(treeNode.getValue());// 中序遍历
       printTreeNote(treeNode.getRightNote());
+    }
+  }
+
+  public static void inOrderTraversal(TreeNode node){
+    if(node == null){
+      return;
+    }else{
+      inOrderTraversal(node.getLeftNote());
+      System.out.println(node.getValue());
+      inOrderTraversal(node.getRightNote());
     }
   }
 
