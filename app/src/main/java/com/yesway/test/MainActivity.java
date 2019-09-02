@@ -10,6 +10,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Debug;
+import android.os.Handler;
+import android.os.Messenger;
 import android.os.Trace;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
@@ -75,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
     for (int i = 0; i < linkedList.size(); i++) {
       Log.v("MYTAG",linkedList.get(i));
     }
+
+    Handler handler;
+    Messenger msg = null;
+    //handler.sendMessage()
   }
 
 
