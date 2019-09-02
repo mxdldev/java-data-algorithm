@@ -1,7 +1,5 @@
 package temp;
 
-import sun.reflect.generics.tree.Tree;
-
 /**
  * Description: <Test20190805_TreeNode><br>
  * Author: mxdl<br>
@@ -16,7 +14,7 @@ public class Test20190805_TreeNode {
       return 0;
     }
     int leftHeight = 1 + getTreeHeight(treeNode.leftNode);
-    int rightHeight = 1 + getTreeHeight(treeNode.rightNdoe);
+    int rightHeight = 1 + getTreeHeight(treeNode.rightNode);
 
     return leftHeight > rightHeight ? leftHeight : rightHeight;
   }
@@ -26,7 +24,7 @@ public class Test20190805_TreeNode {
     if (treeNode == null) {
       return 0;
     }
-    return 1 + getTreeNodeCount(treeNode.leftNode) + getTreeNodeCount(treeNode.rightNdoe);
+    return 1 + getTreeNodeCount(treeNode.leftNode) + getTreeNodeCount(treeNode.rightNode);
   }
 
   // 3.判断两个二叉树是否完全相等
@@ -41,7 +39,7 @@ public class Test20190805_TreeNode {
       return false;
     }
     return treeNode1.val == treeNode2.val && isTreeNodeSame(treeNode1.leftNode, treeNode2.leftNode)
-        && isTreeNodeSame(treeNode1.rightNdoe, treeNode2.rightNdoe);
+        && isTreeNodeSame(treeNode1.rightNode, treeNode2.rightNode);
   }
 
   //4.判断一个二叉树是否是对等的二叉树
@@ -49,7 +47,7 @@ public class Test20190805_TreeNode {
     if(treeNode == null){
       return true;
     }else{
-      return isSymTreeNdoe(treeNode.leftNode,treeNode.rightNdoe);
+      return isSymTreeNdoe(treeNode.leftNode,treeNode.rightNode);
     }
   }
   public static boolean isSymTreeNdoe(TreeNode leftNode,TreeNode rightNode){
@@ -62,7 +60,7 @@ public class Test20190805_TreeNode {
     if(leftNode == null && rightNode != null){
       return false;
     }
-    return leftNode.val == rightNode.val && isSymTreeNdoe(leftNode.leftNode,rightNode.rightNdoe) && isSymTreeNdoe(leftNode.rightNdoe,rightNode.leftNode);
+    return leftNode.val == rightNode.val && isSymTreeNdoe(leftNode.leftNode,rightNode.rightNode) && isSymTreeNdoe(leftNode.rightNode,rightNode.leftNode);
   }
   public static void main(String[] args) {
     TreeNode treeNode = new TreeNode(0);
@@ -73,13 +71,13 @@ public class Test20190805_TreeNode {
     TreeNode treeNode5 = new TreeNode(3);
     TreeNode treeNode6 = new TreeNode(2);
     treeNode.leftNode = treeNode1;
-    treeNode.rightNdoe = treeNode2;
+    treeNode.rightNode = treeNode2;
 
     treeNode1.leftNode = treeNode3;
-    treeNode1.rightNdoe = treeNode4;
+    treeNode1.rightNode = treeNode4;
 
     treeNode2.leftNode = treeNode5;
-    treeNode2.rightNdoe = treeNode6;
+    treeNode2.rightNode = treeNode6;
     // treeNode1.leftNode = treeNode3;
 
     int treeHeight = getTreeHeight(treeNode);

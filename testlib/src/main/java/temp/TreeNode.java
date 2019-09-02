@@ -10,7 +10,7 @@ package temp;
 public class TreeNode {
     public int val;
     public TreeNode leftNode;
-    public TreeNode rightNdoe;
+    public TreeNode rightNode;
     public TreeNode(int val){
         this.val = val;
     }

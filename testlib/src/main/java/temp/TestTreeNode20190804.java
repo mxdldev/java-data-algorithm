@@ -1,9 +1,5 @@
 package temp;
 
-import java.util.Iterator;
-import java.util.TreeMap;
-import java.util.TreeSet;
-
 /**
  * Description: <TestTreeNode20190804><br>
  * Author:      mxdl<br>
@@ -22,13 +18,13 @@ public class TestTreeNode20190804 {
         TreeNode treeNode6 = new TreeNode(7);
 
         treeNode.leftNode = treeNode1;
-        treeNode.rightNdoe = treeNode2;
+        treeNode.rightNode = treeNode2;
 
         treeNode1.leftNode = treeNode3;
-        treeNode1.rightNdoe = treeNode4;
+        treeNode1.rightNode = treeNode4;
 
         treeNode4.leftNode = treeNode5;
-        treeNode4.rightNdoe = treeNode6;
+        treeNode4.rightNode = treeNode6;
 
         int treeNodeHeight = getTreeNodeHeight(treeNode);
         System.out.println("treeNodeHeight:"+treeNodeHeight);
@@ -48,7 +44,7 @@ public class TestTreeNode20190804 {
             return 0;
         }else{
             int leftHeight = 1 + getTreeNodeHeight(treeNode.leftNode);
-            int rightHeight = 1 + getTreeNodeHeight(treeNode.rightNdoe);
+            int rightHeight = 1 + getTreeNodeHeight(treeNode.rightNode);
             return Math.max(leftHeight,rightHeight);
         }
     }
@@ -57,7 +53,7 @@ public class TestTreeNode20190804 {
         if(treeNode == null){
             return 0;
         }else{
-            return 1 + getTreeNodeCount(treeNode.leftNode) + getTreeNodeCount(treeNode.rightNdoe);
+            return 1 + getTreeNodeCount(treeNode.leftNode) + getTreeNodeCount(treeNode.rightNode);
         }
     }
 
@@ -73,7 +69,7 @@ public class TestTreeNode20190804 {
             return false;
         }
         return treeNode1.val == treeNode2.val && isSameTreeNode(treeNode1.leftNode,treeNode2.leftNode)
-                &&isSameTreeNode(treeNode1.rightNdoe,treeNode2.rightNdoe);
+                &&isSameTreeNode(treeNode1.rightNode,treeNode2.rightNode);
     }
 
     //4.判断一个二叉树是否是对称二叉树
@@ -81,7 +77,7 @@ public class TestTreeNode20190804 {
         if(treeNode == null){
             return true;
         }else{
-            return isSymTreeNode(treeNode.leftNode,treeNode.rightNdoe);
+            return isSymTreeNode(treeNode.leftNode,treeNode.rightNode);
         }
     }
     public static boolean isSymTreeNode(TreeNode leftNode,TreeNode rightNode){
@@ -94,7 +90,7 @@ public class TestTreeNode20190804 {
         if(leftNode == null && rightNode != null){
             return false;
         }
-        return leftNode.val == rightNode.val && isSymTreeNode(leftNode.leftNode,rightNode.rightNdoe)
-                && isSymTreeNode(leftNode.rightNdoe,rightNode.leftNode);
+        return leftNode.val == rightNode.val && isSymTreeNode(leftNode.leftNode,rightNode.rightNode)
+                && isSymTreeNode(leftNode.rightNode,rightNode.leftNode);
     }
 }

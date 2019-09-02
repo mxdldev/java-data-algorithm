@@ -17,7 +17,7 @@ public class MainAlgorithm {
         }else{
             printTreeNode(treeNode.leftNode);
             System.out.println(treeNode.val);
-            printTreeNode(treeNode.rightNdoe);
+            printTreeNode(treeNode.rightNode);
         }
     }
     public static void main(String[] args){
@@ -30,13 +30,13 @@ public class MainAlgorithm {
         TreeNode treeNode6 = new TreeNode(6);
 
         treeNode.leftNode = treeNode1;
-        treeNode.rightNdoe = treeNode2;
+        treeNode.rightNode = treeNode2;
 
         treeNode1.leftNode = treeNode3;
-        treeNode1.rightNdoe = treeNode4;
+        treeNode1.rightNode = treeNode4;
 
         treeNode2.leftNode = treeNode5;
-        treeNode2.rightNdoe = treeNode6;
+        treeNode2.rightNode = treeNode6;
 
         printTreeNode(treeNode);
     }
