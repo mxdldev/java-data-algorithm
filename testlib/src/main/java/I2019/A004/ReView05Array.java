@@ -126,26 +126,75 @@ public class ReView05Array {
     return arr[m - 1][n - 1];
   }
 
+  // 9.求盛最多水的容器
+  public static int getMaxContainer(int[] arr) {
+    int maxContainer = 0;
+    for (int i = 0; i < arr.length; i++) {
+      for (int j = i + 1; j < arr.length; j++) {
+        int value = Math.min(arr[i], arr[j]) * (j - i);
+        if (value > maxContainer) {
+          maxContainer = value;
+        }
+      }
+    }
+    return maxContainer;
+  }
+
+  // 10.三数和为0找下标
+  public static int[] getIndexSum(int[] nums) {
+    for (int i = 0; i < nums.length; i++) {
+      for (int j = i + 1; j < nums.length; j++) {
+        for (int k = j + 1; k < nums.length; k++) {
+          if ((nums[i] + nums[j] + nums[k]) == 0) {
+            return new int[] {i, j, k};
+          }
+        }
+      }
+    }
+    return null;
+  }
+
+  public static int searchByHalf(int[] arr,int target){
+    int start = 0;
+    int middle = 0;
+    int end = arr.length -1;
+    while(start <= end ){//*****
+      middle = (start + end)/2;
+      if(target > arr[middle]){
+        start = middle+1;
+      }else if(target < arr[middle]){
+        end = middle - 1;
+      }else{
+        return middle;
+      }
+    }
+    return -1;
+  }
+
+  public static int searchHalf(int[] arr,int target){
+      int start = 0;
+      int end = arr.length - 1;
+      int mid = 0;
+      while (start <= end){
+          mid = (start + end)/2;
+          if(target > arr[mid]){
+              start = mid + 1;
+          }else if(target < arr[mid]){
+              end = mid - 1;
+          }else{
+              return mid;
+          }
+      }
+      return -1;
+  }
+
+
   public static void main(String[] args) {
-    int[] arr = {4, 2, 8, 5, 7, 1, 3, 6};
-    // int[] ints = changeSort(arr);
-    // int[] ints = buketSor(arr, 8);
-    // for (int i = 0; i < ints.length; i++) {
-    // if (ints[i] > 0) {
-    // System.out.println(i);
-    // }
-    // }
-    // System.out.println(Arrays.toString(ints));
-    int[] ints = removeRepeat(arr);
-    // System.out.println(isRepeat(arr));
-    // for (int i = 0; i < ints.length; i++) {
-    // System.out.println(ints[i]);
-    // }
-    // int pathCount = getPathCount(3, 3);
-    // System.out.println(pathCount);
-//    int[][] arr1 = {{4, 2}, {8, 5}, {7, 1}};
-//    int minSumByPath = getMinSumByPath(arr1);
-    int[] indexBySum = getIndexBySum(arr, 9);
-    System.out.println(Arrays.toString(indexBySum));
+    //int[] arr = {4, 2, 8, 5, 7, -10, 3, 6};
+    //int[] indexSum = getIndexSum(arr);
+    int[] arr = {2,4,6,8,10};
+    int i = searchHalf(arr, 8);
+
+    System.out.println("i:"+i);
   }
 }
