@@ -143,4 +143,5 @@ public class MainAlgorithm {
 //    }
 
   }
+  public volatile int num;
 }
