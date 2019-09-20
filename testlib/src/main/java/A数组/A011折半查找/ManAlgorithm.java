@@ -1,13 +1,13 @@
 package A数组.A011折半查找;
 
 /**
- * Description: <ManAlgorethm><br>
+ * Description: <ManAlgorithm><br>
  * Author:      mxdl<br>
  * Date:        2019/8/9<br>
  * Version:     V1.0.0<br>
  * Update:     <br>
  */
-public class ManAlgorethm {
+public class ManAlgorithm {
     //折半查找
     public static int getIndex(int[] arr,int value){
         int min = 0;
