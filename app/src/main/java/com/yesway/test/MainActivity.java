@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     mImg = findViewById(R.id.img);
+    mImg.getLeft();
+    mImg.getRight();
+    mImg.getBottom();
+    int top = mImg.getTop();
     findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
