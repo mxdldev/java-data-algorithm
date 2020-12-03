@@ -1,4 +1,4 @@
-package I2019.A001两数之和;
+package Z2019.A001两数之和;
 
 import java.util.HashMap;
 import java.util.Map;

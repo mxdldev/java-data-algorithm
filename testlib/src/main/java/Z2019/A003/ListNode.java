@@ -1,4 +1,4 @@
-package I2019.A003;
+package Z2019.A003;
 
 /**
  * Description: <ListNode><br>

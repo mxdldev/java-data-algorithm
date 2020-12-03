@@ -1,5 +1,8 @@
 package G字符串.A001查找最大的非重复字符串;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Description: <查找最大的非重复字符串><br>
  * Author:      mxdl<br>
@@ -9,19 +12,34 @@ package G字符串.A001查找最大的非重复字符串;
  */
 public class MainAlgorithm {
     public static void main(String[] args){
-        String str = "aaibbzoveccyou";
-        String[] split = str.split("(.)\\1+");
-        int i = 1;
-        String max = split[0];
-        while(i < split.length){
-            if(split[i].compareTo(max) > 1){
-                max = split[i];
-            }
-            i++;
-        }
-        System.out.println(max);
-
+        String str = "ababcddefacc";
+        System.out.println(lengthOfLongestSubstring(str));
     }
 
-
+    public static String lengthOfLongestSubstring(String s) {
+        // 哈希集合，记录每个字符是否出现过
+        Set<Character> occ = new HashSet<Character>();
+        int n = s.length();
+        // 右指针，初始值为 -1，相当于我们在字符串的左边界的左侧，还没有开始移动
+        int rk = -1, ans = 0;
+        String result = "";
+        for (int i = 0; i < n; ++i) {
+            if (i != 0) {
+                // 左指针向右移动一格，移除一个字符
+                occ.remove(s.charAt(i - 1));
+            }
+            while (rk + 1 < n && !occ.contains(s.charAt(rk + 1))) {
+                // 不断地移动右指针
+                occ.add(s.charAt(rk + 1));
+                ++rk;
+            }
+            // 第 i 到 rk 个字符是一个极长的无重复字符子串
+            String value = s.substring(i,rk+1);
+            if(value.length() > result.length()){
+                result = value;
+            }
+            ans = Math.max(ans, rk - i + 1);
+        }
+        return result;
+    }
 }

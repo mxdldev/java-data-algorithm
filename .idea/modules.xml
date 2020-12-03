@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/YeswayTest.iml" filepath="$PROJECT_DIR$/YeswayTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/algorithm.iml" filepath="$PROJECT_DIR$/algorithm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java-algorithm.iml" filepath="$PROJECT_DIR$/java-algorithm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java-data-algorithm.iml" filepath="$PROJECT_DIR$/java-data-algorithm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/testlib/testlib.iml" filepath="$PROJECT_DIR$/testlib/testlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java-data-algorithm.iml" filepath="$PROJECT_DIR$/.idea/java-data-algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/java-data-algorithm.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/java-data-algorithm.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testlib/java-data-algorithm.testlib.iml" filepath="$PROJECT_DIR$/.idea/modules/testlib/java-data-algorithm.testlib.iml" />
     </modules>
   </component>
 </project>

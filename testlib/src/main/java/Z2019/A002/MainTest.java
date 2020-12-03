@@ -1,6 +1,4 @@
-package I2019.A002;
-
-import java.util.List;
+package Z2019.A002;
 
 /**
  * Description: <MainTest><br>

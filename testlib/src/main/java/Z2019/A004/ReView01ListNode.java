@@ -1,4 +1,4 @@
-package I2019.A004;
+package Z2019.A004;
 
 import temp.ListNode;
 

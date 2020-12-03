@@ -36,6 +36,8 @@
 1. [翻转一个整形数字](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/H%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/A001%E7%BF%BB%E8%BD%AC%E4%B8%80%E4%B8%AA%E6%95%B4%E6%95%B0/MainAlgorithm.java)
 ## 数据结构
 ![数据结构](https://github.com/geduo83/algorithm/blob/master/app/src/main/res/drawable/data_structs.jpeg)
+## 其他
+1. 求裴波那契数列第n项的值
 ## 常见错误：
 ### 1. 查找最大回文字符串：
 * 相邻字符是回文的判断逻辑不对
