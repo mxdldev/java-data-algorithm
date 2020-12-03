@@ -34,10 +34,10 @@
 1. [查找最大的回文字符串](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/G%E5%AD%97%E7%AC%A6%E4%B8%B2/A002%E6%9F%A5%E6%89%BE%E6%9C%80%E5%A4%A7%E7%9A%84%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/MainAlgorithm.java)
 ## 基本类型
 1. [翻转一个整形数字](https://github.com/geduo83/algorithm/blob/master/testlib/src/main/java/H%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/A001%E7%BF%BB%E8%BD%AC%E4%B8%80%E4%B8%AA%E6%95%B4%E6%95%B0/MainAlgorithm.java)
+## 其他
+1. [求裴波那契数列第n项的值](https://github.com/mxdldev/java-data-algorithm/blob/master/testlib/src/main/java/I%E5%85%B6%E4%BB%96/A001%E6%B1%82%E8%A3%B4%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E7%AC%ACn%E9%A1%B9%E7%9A%84%E5%80%BC/MainAlgorithm.java)
 ## 数据结构
 ![数据结构](https://github.com/geduo83/algorithm/blob/master/app/src/main/res/drawable/data_structs.jpeg)
-## 其他
-1. 求裴波那契数列第n项的值
 ## 常见错误：
 ### 1. 查找最大回文字符串：
 * 相邻字符是回文的判断逻辑不对
