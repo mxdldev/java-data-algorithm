@@ -18,13 +18,31 @@ public class MainAlgorithm {
     MyListLink link = new MyListLink();
     link.addLast(0);
     link.addLast(1);
+    link.addLast(2);
     link.addLast(3);
-    link.addLast(6);
-    ListNode listNote = reverseListNode(link.getListLink());
+   /* ListNode listNote = reverseListNode(link.getListLink());
     while (listNote != null) {
       System.out.println(listNote.getData());
       listNote = listNote.next;
+    }*/
+    System.out.println(link.getListLink());
+    System.out.println(reverseListNode3(link.getListLink()));
+  }
+  //最简单的指针法
+  private static ListNode reverseListNode3(ListNode head){
+    ListNode prev = null;
+    ListNode curr = head;
+    while(curr != null){
+      //断开
+      ListNode next = curr.next;
+      //翻转
+      curr.next = prev;
+      //指针滑动prev
+      prev = curr;
+      //指针滑动curr
+      curr = next;
     }
+    return prev;
   }
 
   // 指针法

@@ -1,5 +1,8 @@
 package Z2021;
 
+import E链表.A001实现一个链表.ListNode;
+import E链表.A009设计一个链表.MyLinkedList2;
+
 /**
  * Description: <Test><br>
  * Author:      mxdl<br>
@@ -74,6 +77,48 @@ class Test {
     public static void main(String[] args) {
         //System.out.println(test(2, 4));
         //System.out.println(test3(new int[]{1,2,5,13},13));
-        System.out.println(test4("abdmcdhh","habcefdmhd"));
+        //System.out.println(test4("abdmcdhh","habcefdmhd"));
+
+        ListNode listNote = new ListNode(0);
+        ListNode listNote1 = new ListNode(1);
+        ListNode listNote2 = new ListNode(2);
+        ListNode listNote3 = new ListNode(3);
+        ListNode listNote4 = new ListNode(4);
+        ListNode listNote5 = new ListNode(5);
+
+        listNote.setNext(listNote1);
+        listNote1.setNext(listNote2);
+        listNote2.setNext(listNote3);
+        listNote3.setNext(listNote4);
+        listNote4.setNext(listNote5);
+
+        listNote5.setNext(listNote1);
+     /*   listNote2.setNext(listNote3);
+        listNote3.setNext(listNote1);*/
+        //System.out.println(listNote);
+        ListNode check = check(listNote);
+        System.out.println(check.data);
+    }
+    static ListNode check(ListNode head){
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast){
+                System.out.println("ok");
+                break;
+            }
+        }
+        fast = head;
+        while ( fast != null){
+            slow = slow.next;
+            fast = fast.next;
+            if(slow == fast){
+                System.out.println("ok1");
+                break;
+            }
+        }
+        return fast;
     }
 }

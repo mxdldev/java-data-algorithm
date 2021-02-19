@@ -34,4 +34,12 @@ public class ListNode {
   public ListNode getNext() {
     return next;
   }
+
+  @Override
+  public String toString() {
+    return "ListNode{" +
+            "data=" + data +
+            ", next=" + next +
+            '}';
+  }
 }
