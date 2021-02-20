@@ -25,8 +25,9 @@ public class MainAlgorithm {
       System.out.println(listNote.getData());
       listNote = listNote.next;
     }*/
-    System.out.println(link.getListLink());
-    System.out.println(reverseListNode3(link.getListLink()));
+   /* System.out.println(link.getListLink());
+    System.out.println(reverseListNode3(link.getListLink()));*/
+    System.out.println(reverse(null,link.getListLink()));
   }
   //最简单的指针法
   private static ListNode reverseListNode3(ListNode head){
@@ -43,6 +44,18 @@ public class MainAlgorithm {
       curr = next;
     }
     return prev;
+  }
+
+  //递归法，时间复杂度和空间复杂度都是O(n)
+  private static ListNode reverse(ListNode prev,ListNode curr){
+    if(curr == null){
+      return prev;
+    }
+    ListNode next = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = next;
+    return reverse(prev,curr);
   }
 
   // 指针法

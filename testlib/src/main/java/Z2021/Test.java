@@ -92,7 +92,7 @@ class Test {
         listNote3.setNext(listNote4);
         listNote4.setNext(listNote5);
 
-        listNote5.setNext(listNote1);
+        listNote5.setNext(listNote3);
      /*   listNote2.setNext(listNote3);
         listNote3.setNext(listNote1);*/
         //System.out.println(listNote);
@@ -102,23 +102,18 @@ class Test {
     static ListNode check(ListNode head){
         ListNode slow = head;
         ListNode fast = head;
-        while(fast != null){
+        while(fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
             if(slow == fast){
-                System.out.println("ok");
-                break;
+                fast = head;
+                while (slow != fast){
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+                return fast;
             }
         }
-        fast = head;
-        while ( fast != null){
-            slow = slow.next;
-            fast = fast.next;
-            if(slow == fast){
-                System.out.println("ok1");
-                break;
-            }
-        }
-        return fast;
+        return null;
     }
 }
