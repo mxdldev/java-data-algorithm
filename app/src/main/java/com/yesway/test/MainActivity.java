@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         Log.v("MYTAG","netConnected:"+netConnected);
       }
     });
-
   }
 
   private void testLinkList() {
