@@ -23,7 +23,7 @@ class MainAlgorithm {
     }
 
     public static void main(String[] args) {
-        System.out.println(removeRepeatElement(new int[]{0,0,2,2,3}));
+        System.out.println(removeRepeatElement(new int[]{0,0,0,2,2,3,3}));
     }
 
 }
