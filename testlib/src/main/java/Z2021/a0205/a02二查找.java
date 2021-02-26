@@ -1,4 +1,4 @@
-package Z2021;
+package Z2021.a0205;
 
 public class a02二查找 {
     //查找要插入元素的下标

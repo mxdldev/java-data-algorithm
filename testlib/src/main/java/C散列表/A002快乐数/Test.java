@@ -21,7 +21,6 @@ class Test {
             n = getNext(n);
         }
         return n == 1;
-
     }
     static int getNext(int n){
         int sum = 0;
