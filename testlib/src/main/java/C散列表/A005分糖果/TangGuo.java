@@ -1,4 +1,4 @@
-package G字符串.A005分糖果;
+package C散列表.A005分糖果;
 
 /**
  * Description: <TangGuo><br>

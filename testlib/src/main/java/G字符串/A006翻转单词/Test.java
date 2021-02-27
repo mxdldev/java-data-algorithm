@@ -22,13 +22,6 @@ public class Test {
         return result;
     }
 
-    public static void main(String[] args) {
-        //System.out.println(reverseWord("wo shi shui"));
-        //System.out.println(reverseWord1("  who  are you  "));
-        StringBuffer s = removeSpace("  who    are  you    ");
-        StringBuffer reverse = reverse(s, 0, s.length() - 1);
-        System.out.println(reverse1(reverse));
-    }
     //字符串去空格
     static public StringBuffer removeSpace(String str){
         int start = 0;
@@ -83,5 +76,13 @@ public class Test {
             start = end;
         }
         return buffer.toString();
+    }
+
+    public static void main(String[] args) {
+        //System.out.println(reverseWord("wo shi shui"));
+        //System.out.println(reverseWord1("  who  are you  "));
+        StringBuffer s = removeSpace("  who    are  you    ");
+        StringBuffer reverse = reverse(s, 0, s.length() - 1);
+        System.out.println(reverse1(reverse));
     }
 }

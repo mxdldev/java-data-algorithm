@@ -11,7 +11,6 @@ class Test {
             while (j >= 0 && s.charAt(i) != s.charAt(j + 1)) {
                 j = next[j];
             }
-
             if (s.charAt(i) == s.charAt(j + 1)) {
                 j++;
             }
@@ -23,7 +22,6 @@ class Test {
         if (needle.length() == 0) {
             return 0;
         }
-
         int[] next = new int[needle.length()];
         getNext(next, needle);
         int j = -1;

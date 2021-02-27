@@ -1,4 +1,4 @@
-package G字符串.A004相同字母异位词;
+package C散列表.A004相同字母异位词;
 
 /**
  * Description: <SameWord><br>

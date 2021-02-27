@@ -1,4 +1,4 @@
-package G字符串.A003赎金信;
+package C散列表.A003赎金信;
 
 /**
  * Description: <MainAlgorithm><br>
