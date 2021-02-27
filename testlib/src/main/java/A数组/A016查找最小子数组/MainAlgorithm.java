@@ -10,11 +10,7 @@ import java.util.Arrays;
  * Update:     <br>
  */
 class MainAlgorithm {
-    public static void main(String[] args) {
-        //System.out.println(Arrays.toString(test1(new int[]{2, 4, 1, 2, 4, 1}, 7)));
-        System.out.println(minSubArrayLen(new int[]{3, 4, 1, 2, 4, 1}, 7));
-        System.out.println(minSubArrayLen1(new int[]{3, 2, 1, 1, 3, 0}, 7));
-    }
+
     //1.方法1
     static int[] test1(int[] nums, int target) {
         for (int len = 2; len < nums.length; len++) {
@@ -35,7 +31,14 @@ class MainAlgorithm {
         }
         return null;
     }
-    //2.方法2
+    //2.暴力法
+    //1,2,3,4
+    //1+2
+    //1+2+3
+    //1+2+3+4
+    //2+3
+    //2+3+4
+    //3+4
     static int minSubArrayLen(int[] nums,int target){
         int minLen = Integer.MAX_VALUE;
         for(int i = 0; i < nums.length; i++){
@@ -43,13 +46,13 @@ class MainAlgorithm {
             for(int j = i; j < nums.length; j++){
                 sum += nums[j];
                 int len = j - i + 1;
-                if(sum >= target){
+                if(sum == target){
                     minLen = len < minLen ? len : minLen;
                     break;
                 }
             }
         }
-        return minLen == Integer.MAX_VALUE ? 0 : minLen;
+        return minLen == 0 ? 0 : minLen;
     }
     //3.滑动窗口
     static int minSubArrayLen1(int[] nums,int target){
@@ -61,9 +64,14 @@ class MainAlgorithm {
             while (sum >= target){
                 int len = end - start + 1;
                 minLen = len < minLen ? len: minLen;
-                sum -= nums[start++];
+                sum -= nums[start++];//调整窗口的开始位置
             }
         }
-        return minLen == Integer.MAX_VALUE ? 0 : minLen;
+        return minLen == 0 ? 0 : minLen;
+    }
+    public static void main(String[] args) {
+        //System.out.println(Arrays.toString(test1(new int[]{2, 4, 1, 2, 4, 1}, 7)));
+        //System.out.println(minSubArrayLen(new int[]{3, 4, 1, 2, 4, 1}, 7));
+        System.out.println(minSubArrayLen1(new int[]{3, 4, 1, 1, 3, 0}, 7));
     }
 }
