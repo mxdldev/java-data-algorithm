@@ -1,6 +1,13 @@
 package Z2021;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.PriorityBlockingQueue;
 
 /**
  * Description: <Test1><br>
@@ -41,6 +48,15 @@ class Test1 {
 
     public static void main(String[] args) {
         test("aabaaf");
+        LinkedList<Integer> link = new LinkedList<>();
+        link.offerFirst(1);
+        link.offerLast(1);
+        Queue queue = new LinkedBlockingQueue();
+        Queue queue1 = new LinkedBlockingDeque();
+        Queue queue2 = new PriorityBlockingQueue();
+        Stack<Integer> stack = new Stack<>();
+        Iterator iterator = queue.iterator();
+        queue.poll()
     }
 //    getNext1(int next, String s) {
 //    int j = -1;
