@@ -55,8 +55,6 @@ class Test1 {
         Queue queue1 = new LinkedBlockingDeque();
         Queue queue2 = new PriorityBlockingQueue();
         Stack<Integer> stack = new Stack<>();
-        Iterator iterator = queue.iterator();
-        queue.poll()
     }
 //    getNext1(int next, String s) {
 //    int j = -1;
