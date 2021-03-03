@@ -1,62 +1,54 @@
 package D栈队列.A002用数组实现一个队列;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.Stack;
 
-public class MyQueue1 {
+public class MyQueue1<T> {
     //232
     //225
-    private Deque<Integer> pushStack;
-    private Deque<Integer> popStack;
+    private Stack<T> pushStack = new Stack<>();
+    private Stack<T> pollStack = new Stack<>();
 
-    public MyQueue1() {
-        pushStack = new ArrayDeque<>();
-        popStack = new ArrayDeque<>();
+    public void push(T t) {
+        pushStack.push(t);
     }
 
-    public void push(int x) {
-        // 在任何时候都可以向 pushStack 推入元素
-        pushStack.addLast(x);
-    }
-
-    public int pop() {
-        // 从 popStack 取出元素
-        if (!popStack.isEmpty()) {
-            return popStack.removeLast();
+    public T poll() {
+        if (pollStack.isEmpty()) {
+            while (!pushStack.isEmpty()) {
+                pollStack.push(pushStack.pop());
+            }
         }
-        // 走到这里是因为 popStack 为空，此时需要将 pushStack 里的所有元素依次放入 popStack
-        while (!pushStack.isEmpty()) {
-            popStack.addLast(pushStack.removeLast());
-        }
-        return popStack.removeLast();
+        return pollStack.pop();
     }
 
-    public int peek() {
-        // 从 popStack 取出元素
-        if (!popStack.isEmpty()) {
-            return popStack.peekLast();
-        }
-        // 走到这里是因为 popStack 为空，此时需要将 pushStack 里的所有元素依次放入 popStack
-        while (!pushStack.isEmpty()) {
-            popStack.addLast(pushStack.removeLast());
-        }
-        return popStack.peekLast();
+    public T peek() {
+        T t = poll();
+        pollStack.push(t);
+        return t;
     }
 
-    public boolean empty() {
-        // 两个栈都为空，才说明队列为空
-        return pushStack.isEmpty() && popStack.isEmpty();
+    public boolean isEmpty() {
+        return pushStack.isEmpty() && pollStack.isEmpty();
     }
-
 
     public static void main(String[] args) {
-        MyQueue1 myQueue1 = new MyQueue1();
-        myQueue1.push(1);
-        myQueue1.push(2);
-        myQueue1.push(3);
+        MyQueue1<Integer> myQueue2 = new MyQueue1<>();
+        myQueue2.push(1);
+        myQueue2.push(2);
+        myQueue2.push(3);
 
-        System.out.println(myQueue1.pop());
-        System.out.println(myQueue1.pop());
-        System.out.println(myQueue1.pop());
+        System.out.println(myQueue2.poll());
+        System.out.println(myQueue2.poll());
+
+        myQueue2.push(4);
+        myQueue2.push(5);
+        System.out.println(myQueue2.poll());
+        System.out.println(myQueue2.poll());
+        //System.out.println(myQueue2.poll());
+        System.out.println("----------------------------");
+        System.out.println(myQueue2.peek());
+        System.out.println(myQueue2.poll());
+        myQueue2.push(6);
+        System.out.println(myQueue2.poll());
     }
 }
