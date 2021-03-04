@@ -10,7 +10,7 @@ import temp.TreeNode;
  * Update:     <br>
  */
 public class MainAlgorithm {
-    //二叉树的中序遍历，先遍历左子树，在遍历根节点，最后遍历右子树
+    //二叉树的中序遍历，先遍历左子树，在遍历根节点，最后遍历右子树 144 94 145
     public static void printTreeNode(TreeNode treeNode){
         if(treeNode == null){
             return;

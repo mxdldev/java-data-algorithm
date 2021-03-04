@@ -16,7 +16,6 @@ class Solution {
         //创建一个优先队列
         PriorityQueue<int[]> pq = new PriorityQueue<int[]>(new Comparator<int[]>() {
             public int compare(int[] pair1, int[] pair2) {
-                System.out.println("ok");
                 return pair1[0] != pair2[0] ? pair2[0] - pair1[0] : pair2[1] - pair1[1];
             }
         });

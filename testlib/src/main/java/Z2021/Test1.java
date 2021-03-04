@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.TreeSet;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.PriorityBlockingQueue;
@@ -36,9 +37,9 @@ class Test1 {
         next[0] = -1;
         for (int i = 1; i < str.length(); i++) {
             while (j >= 0 && str.charAt(i) != str.charAt(j + 1)) {
-                   j = next[j];
+                j = next[j];
             }
-            if(str.charAt(i) == str.charAt(j+1)){
+            if (str.charAt(i) == str.charAt(j + 1)) {
                 j++;
             }
             next[i] = j;
@@ -55,6 +56,13 @@ class Test1 {
         Queue queue1 = new LinkedBlockingDeque();
         Queue queue2 = new PriorityBlockingQueue();
         Stack<Integer> stack = new Stack<>();
+
+        TreeSet<Integer> set = new TreeSet<>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+
+        System.out.println("ok");
     }
 //    getNext1(int next, String s) {
 //    int j = -1;
