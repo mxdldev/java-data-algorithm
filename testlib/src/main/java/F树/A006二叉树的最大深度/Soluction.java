@@ -1,6 +1,6 @@
-package F树.A009二叉树的最大深度;
+package F树.A006二叉树的最大深度;
 
-import F树.A001求二叉树的高节点数中序遍历.TreeNode;
+import F树.A001求二叉树的节点数.TreeNode;
 
 public class Soluction {
     //leetcode:104

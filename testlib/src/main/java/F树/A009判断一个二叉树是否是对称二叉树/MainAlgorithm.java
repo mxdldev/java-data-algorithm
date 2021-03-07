@@ -1,8 +1,8 @@
-package F树.A003判断一个二叉树是否是对称二叉树;
+package F树.A009判断一个二叉树是否是对称二叉树;
 
 import java.util.Stack;
 
-import F树.A001求二叉树的高节点数中序遍历.TreeNode;
+import F树.A001求二叉树的节点数.TreeNode;
 
 /**
  * Description: <一个二叉树是否是对称二叉树><br>

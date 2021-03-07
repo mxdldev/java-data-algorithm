@@ -14,7 +14,6 @@ class Soluction {
     //中序遍历的次序和二叉树递增的顺序是一直的
     static int min = 0;
     static boolean flag = false;
-
     static boolean isTreeNode(TreeNode treeNode) {
         if (treeNode == null) {
             return true;

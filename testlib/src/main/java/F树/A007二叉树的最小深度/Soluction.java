@@ -1,23 +1,17 @@
-package F树.A010二叉树的最小深度;
+package F树.A007二叉树的最小深度;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import F树.A001求二叉树的高节点数中序遍历.TreeNode;
+import F树.A001求二叉树的节点数.TreeNode;
 
 public class Soluction {
     static int getMinDepth(TreeNode node){
         if(node == null){
             return 0;
         }
-//        if(node.getLeftNote() == null && node.getRightNote() != null){
-//            return  1 + getMinDepth(node.getRightNote());
-//        }
-//        if(node.getLeftNote() != null && node.getRightNote() == null){
-//            return  1 + getMinDepth(node.getLeftNote());
-//        }
         int left = 1 + getMinDepth(node.getLeftNote());
         int right = 1 + getMinDepth(node.getRightNote());
         System.out.println("left:"+left);

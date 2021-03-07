@@ -4,11 +4,18 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-class Solution {
+/**
+ * Description: <Solution1><br>
+ * Author:      mxdl<br>
+ * Date:        2021/3/7<br>
+ * Version:     V1.0.0<br>
+ * Update:     <br>
+ */
+class Solution1 {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(maxSlidingWindow(new int[]{2,8,6,3,2,4},3)));
-        System.out.println(Arrays.toString(maxSlidingWindow1(new int[]{2,8,6,3,2,4},3)));
+        System.out.println(Arrays.toString(maxSlidingWindow(new int[]{2, 8, 6, 3, 2, 4}, 3)));
     }
+
     //leetcode:239
     static int[] maxSlidingWindow(int[] nums, int k) {
         //数组的长度
@@ -39,27 +46,5 @@ class Solution {
             ans[i - k + 1] = pq.peek()[0];
         }
         return ans;
-    }
-    static int[] maxSlidingWindow1(int[] nums,int k){
-        int n = nums.length;
-        PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
-            @Override
-            public int compare(int[] t1, int[] t2) {
-                return t1[0] != t2[0] ? t2[0] - t1[0] : t2[1] - t1[1];
-            }
-        });
-        int[] result = new int[n - k + 1];
-        for(int i = 0; i < nums.length; i++){
-            pq.offer(new int[]{nums[i],i});
-        }
-        result[0] = pq.peek()[0];
-        for(int i = k; i < nums.length; i++){
-            pq.offer(new int[]{nums[i],i});
-            while (pq.peek()[1] <= i - k){
-                pq.poll();
-            }
-            result[i - k + 1] = pq.peek()[0];
-        }
-        return result;
     }
 }

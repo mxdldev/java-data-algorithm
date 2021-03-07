@@ -1,6 +1,6 @@
-package F树.A002判断两颗二叉树是否完全相同;
+package F树.A008判断两颗二叉树是否完全相同;
 
-import F树.A001求二叉树的高节点数中序遍历.TreeNode;
+import F树.A001求二叉树的节点数.TreeNode;
 
 /**
  * Description: <判断两颗二叉树是否完全相同><br>

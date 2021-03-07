@@ -1,4 +1,4 @@
-package F树.A006层序遍历;
+package F树.A004二叉树遍历_层序遍历;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -7,7 +7,7 @@ import java.util.Queue;
 import Z2019.A003.TreeNode;
 
 public class Soluction {
-    //102,199
+
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode(0);
         TreeNode treeNode1 = new TreeNode(1);
@@ -25,6 +25,7 @@ public class Soluction {
         treeNode2.setRightNode(treeNode6);
         getTreeNode(treeNode);
     }
+    //102,199
     static void getTreeNode(TreeNode treeNode){
         List<List<TreeNode>> list = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList();

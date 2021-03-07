@@ -7,6 +7,19 @@ public class MyStack1<T> {
     private Deque<T> main = new LinkedList();
     private Deque<T> help = new LinkedList();
 
+    public static void main(String[] args) {
+        MyStack1 myStack1 = new MyStack1();
+        myStack1.push(1);
+        myStack1.push(2);
+        myStack1.push(3);
+        System.out.println(myStack1.poll());
+        System.out.println(myStack1.poll());
+        myStack1.push(4);
+        System.out.println(myStack1.peek());
+        System.out.println(myStack1.poll());
+        System.out.println(myStack1.poll());
+    }
+
     public void push(T t) {
         main.offer(t);
     }
@@ -31,18 +44,5 @@ public class MyStack1<T> {
 
     public T peek() {
         return main.peekLast();
-    }
-
-    public static void main(String[] args) {
-        MyStack1 myStack1 = new MyStack1();
-        myStack1.push(1);
-        myStack1.push(2);
-        myStack1.push(3);
-        System.out.println(myStack1.poll());
-        System.out.println(myStack1.poll());
-        myStack1.push(4);
-        System.out.println(myStack1.peek());
-        System.out.println(myStack1.poll());
-        System.out.println(myStack1.poll());
     }
 }

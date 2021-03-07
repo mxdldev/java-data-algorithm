@@ -1,4 +1,4 @@
-package F树.A007二叉树的右视图;
+package F树.A005二叉树的右视图;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -8,7 +8,7 @@ import java.util.Queue;
 import Z2019.A003.TreeNode;
 
 public class Soluction {
-    //leetcode:199
+
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode(0);
         TreeNode treeNode1 = new TreeNode(1);
@@ -26,7 +26,7 @@ public class Soluction {
         treeNode2.setRightNode(treeNode6);
         getTreeNode(treeNode);
     }
-
+    //leetcode:199
     static void getTreeNode(TreeNode treeNode) {
         List<TreeNode> list = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList();
