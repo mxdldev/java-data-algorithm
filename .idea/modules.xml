@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="java-data-algorithm/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-data-algorithm.iml" filepath="$PROJECT_DIR$/.idea/java-data-algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/java-data-algorithm.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/java-data-algorithm.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/testlib/java-data-algorithm.testlib.iml" filepath="$PROJECT_DIR$/.idea/modules/testlib/java-data-algorithm.testlib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testlib/testlib.iml" filepath="$PROJECT_DIR$/.idea/modules/testlib/testlib.iml" group="java-data-algorithm/testlib" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/work_android-java-data-algorithm.iml" filepath="$PROJECT_DIR$/.idea/modules/work_android-java-data-algorithm.iml" group="java-data-algorithm" />
     </modules>
   </component>
 </project>
