@@ -230,11 +230,11 @@ public class Test {
     //14.删除节点
     static TreeNode removeTreeNode(TreeNode root, int target) {
         if (root.val == target) {
-            if(root.leftNode == null){
+            if (root.leftNode == null) {
                 return root.rightNode;
-            }else if(root.rightNode == null){
+            } else if (root.rightNode == null) {
                 return root.leftNode;
-            }else{
+            } else {
                 TreeNode node = root.rightNode;
                 while (node.leftNode != null) {
                     node = node.leftNode;
@@ -251,6 +251,92 @@ public class Test {
         return root;
     }
 
+    //1.查找
+    static TreeNode searchTreeNode11(TreeNode root, int target) {
+        if (root == null) {
+            return null;
+        } else if (root.val > target) {
+            return searchTreeNode11(root.leftNode, target);
+        } else if (root.val < target) {
+            return searchTreeNode11(root.rightNode, target);
+        } else {
+            return root;
+        }
+    }
+
+    //2.迭代法
+    static TreeNode searchTreeNode22(TreeNode root, int target) {
+        while (root != null) {
+            if (root.val > target) {
+                root = root.leftNode;
+            } else if (root.val < target) {
+                root = root.rightNode;
+            } else {
+                return root;
+            }
+        }
+        return null;
+    }
+
+    //验证:中序遍历和单调递曾是保持一致的,左子树和右子数都为真
+    static int min = 0;
+    static boolean flag1 = false;
+
+    static boolean isBinaryTreeNode11(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        boolean left = isBinaryTreeNode11(root.leftNode);
+        if (!flag1) {
+            min = root.val;
+            flag1 = true;
+        } else {
+            if (min > root.val) {
+                return false;
+            }
+        }
+        boolean right = isBinaryTreeNode11(root.rightNode);
+        return left && right;
+    }
+    //插入元素
+    static TreeNode insertTreeNode11(TreeNode root,int target){
+        if(root == null){
+            return new TreeNode(target);
+        }
+        if(root.val > target){
+           root.leftNode = insertTreeNode11(root.leftNode,target);
+        }else{
+            root.rightNode = insertTreeNode11(root.rightNode,target);
+        }
+        return root;
+    }
+    //1.remove四种情况
+    static TreeNode removeTreeNode11(TreeNode root,int target){
+        if(root == null){
+            return null;
+        }
+        if(root.val > target){
+            root.leftNode = removeTreeNode11(root.leftNode,target);
+        }else if(root.val < target){
+            root.rightNode = removeTreeNode11(root.rightNode,target);
+        }else{
+            if(root.leftNode != null && root.rightNode == null){
+                return root.leftNode;
+            }
+            if(root.leftNode == null && root.rightNode != null){
+                return root.rightNode;
+            }else{
+                TreeNode curr = root.rightNode;
+                while (curr.leftNode != null){
+                    curr = curr.leftNode;
+                }
+                curr.leftNode = root.leftNode;
+                root = root.rightNode;
+                return root;
+            }
+        }
+        return root;
+    }
     public static void main(String[] args) {
 //        TreeNode root = new TreeNode(0);
 //        TreeNode treeNode1 = new TreeNode(1);
@@ -261,7 +347,8 @@ public class Test {
 //        TreeNode treeNode6 = new TreeNode(6);
 //
 //        root.leftNode = treeNode1;
-//        root.rightNode = treeNode2;
+//        root.rightNode = treeNode2;+
+
 //
 //        treeNode1.leftNode = treeNode3;
 //        treeNode1.rightNode = treeNode4;
@@ -304,9 +391,15 @@ public class Test {
 
         treeNode6.leftNode = treeNode5;
         treeNode6.rightNode = treeNode7;
-        //TreeNode treeNode = searchBinaryTreeNode(root, 2);
-        //System.out.println(isBinaryTreeNode(root));
-        TreeNode o = insertTreeNode(root, 9);
-        System.out.println(o);
+//        //TreeNode treeNode = searchBinaryTreeNode(root, 2);
+//        //System.out.println(isBinaryTreeNode(root));
+//        TreeNode o = insertTreeNode(root, 9);
+//        System.out.println(o);
+//        TreeNode o = searchTreeNode11(root, 3);
+//        System.out.println(o.val);
+        //System.out.println(isBinaryTreeNode11(root));
+        //TreeNode treeNode = insertTreeNode11(root, 9);
+        TreeNode treeNode = removeTreeNode11(root, 6);
+        System.out.println("ok");
     }
 }
