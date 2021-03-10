@@ -298,36 +298,38 @@ public class Test {
         boolean right = isBinaryTreeNode11(root.rightNode);
         return left && right;
     }
+
     //插入元素
-    static TreeNode insertTreeNode11(TreeNode root,int target){
-        if(root == null){
+    static TreeNode insertTreeNode11(TreeNode root, int target) {
+        if (root == null) {
             return new TreeNode(target);
         }
-        if(root.val > target){
-           root.leftNode = insertTreeNode11(root.leftNode,target);
-        }else{
-            root.rightNode = insertTreeNode11(root.rightNode,target);
+        if (root.val > target) {
+            root.leftNode = insertTreeNode11(root.leftNode, target);
+        } else {
+            root.rightNode = insertTreeNode11(root.rightNode, target);
         }
         return root;
     }
+
     //1.remove四种情况
-    static TreeNode removeTreeNode11(TreeNode root,int target){
-        if(root == null){
+    static TreeNode removeTreeNode11(TreeNode root, int target) {
+        if (root == null) {
             return null;
         }
-        if(root.val > target){
-            root.leftNode = removeTreeNode11(root.leftNode,target);
-        }else if(root.val < target){
-            root.rightNode = removeTreeNode11(root.rightNode,target);
-        }else{
-            if(root.leftNode != null && root.rightNode == null){
+        if (root.val > target) {
+            root.leftNode = removeTreeNode11(root.leftNode, target);
+        } else if (root.val < target) {
+            root.rightNode = removeTreeNode11(root.rightNode, target);
+        } else {
+            if (root.leftNode != null && root.rightNode == null) {
                 return root.leftNode;
             }
-            if(root.leftNode == null && root.rightNode != null){
+            if (root.leftNode == null && root.rightNode != null) {
                 return root.rightNode;
-            }else{
+            } else {
                 TreeNode curr = root.rightNode;
-                while (curr.leftNode != null){
+                while (curr.leftNode != null) {
                     curr = curr.leftNode;
                 }
                 curr.leftNode = root.leftNode;
@@ -335,6 +337,129 @@ public class Test {
                 return root;
             }
         }
+        return root;
+    }
+
+    static TreeNode searchBinaryTreeNode11(TreeNode root, int target) {
+        if(root == null){
+            return null;
+        }
+        if (root.val > target) {
+            return searchBinaryTreeNode11(root.leftNode, target);
+        } else if (root.val < target) {
+            return searchBinaryTreeNode(root.rightNode, target);
+        } else {
+            return root;
+        }
+    }
+    static TreeNode searchBinaryTreeNode22(TreeNode root,int target){
+        TreeNode curr = root;
+        while (curr != null){
+            if (curr.val > target) {
+                curr = root.leftNode;
+            } else if (curr.val < target) {
+                curr = root.rightNode;
+            } else {
+                return curr;
+            }
+        }
+        return null;
+    }
+    static boolean flag11 = false;
+    static int min11 = 0;
+    static boolean isVerifyBinaryTreeNode(TreeNode root){
+        if(root == null){
+            return true;
+        }
+        boolean left = isVerifyBinaryTreeNode(root.leftNode);
+        if(!flag11){
+            min11 = root.val;
+            flag11 = true;
+        }else{
+            if(root.val < min11){
+                return false;
+            }
+            min11 = root.val;
+        }
+        boolean right = isVerifyBinaryTreeNode(root.rightNode);
+        return left && right;
+    }
+
+    static TreeNode insertTreeNode22(TreeNode root,int target){
+        if(root == null){
+            return new TreeNode(target);
+        }
+        if(root.val > target){
+            root.leftNode = insertTreeNode22(root.leftNode,target);
+        }else{
+            root.rightNode =  insertTreeNode22(root.rightNode,target);
+        }
+        return root;
+    }
+    static TreeNode deletTreeNode11(TreeNode root,int target){
+        if(root == null){
+            return null;
+        }
+        if(root.val > target){
+           root.leftNode = deletTreeNode11(root.leftNode,target);
+        }else if(root.val < target){
+            root.rightNode = deletTreeNode11(root.rightNode,target);
+        }else{
+            if(root.leftNode != null && root.rightNode == null){
+                return root.leftNode;
+            }else if(root.leftNode == null && root.rightNode != null){
+                return root.rightNode;
+            }else{
+                TreeNode curr = root.rightNode;
+                while (curr.leftNode != null){
+                    curr = curr.leftNode;
+                }
+                curr.leftNode = root.leftNode;
+                root = curr.rightNode;
+                return root;
+            }
+        }
+        return root;
+    }
+    static TreeNode mergeTreeNode(TreeNode t1,TreeNode t2){
+        if(t1 != null && t2 == null){
+            return t1;
+        }
+        if(t1 == null && t2 != null){
+            return t2;
+        }
+        TreeNode root = new TreeNode(t1.val + t2.val);
+        root.leftNode = mergeTreeNode(t1.leftNode,t2.leftNode);
+        root.rightNode = mergeTreeNode(t1.rightNode,t2.rightNode);
+        return root;
+    }
+    static TreeNode maxTreeNode(int[] nums,int l,int r){
+        if(l == r){
+            return null;
+        }
+        int max = -1;
+        int index = -1;
+        for(int i = l; i < r; i++){
+            if(nums[i] > max){
+                max = nums[i];
+                index = i;
+            }
+        }
+        TreeNode root = new TreeNode(max);
+        root.leftNode = maxTreeNode(nums,l,index - 1);
+        root.rightNode = maxTreeNode(nums,index + 1,r);
+        return root;
+    }
+    static TreeNode resverseTreeNode22(TreeNode root){
+        if(root == null){
+            return null;
+        }
+        TreeNode temp = root.leftNode;
+        root.leftNode = root.rightNode;
+        root.rightNode = temp;
+
+        resverseTreeNode22(root.leftNode);
+        resverseTreeNode22(root.rightNode);
         return root;
     }
     public static void main(String[] args) {
