@@ -31,7 +31,9 @@ public class MainAlgorithm {
     int[][] arr = new int[n][m];
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < m; j++) {
-        arr[m - 1 - j][i] = a[i][j];
+        int i1 = m - 1 - j;
+        arr[i1][i] = a[i][j];
+        System.out.println(i1+","+i);
       }
     }
     return arr;
@@ -124,9 +126,9 @@ public class MainAlgorithm {
     return result;
   }
   public static void main(String[] args) {
-    int[][] nums = {{1, 2,3}, {4, 5,6}};
-    // int[][] nums = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
-    // int[][] rotate = rotate(nums);
+    //int[][] nums = {{1, 2,3}, {4, 5,6}};
+     int[][] nums = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+     int[][] rotate = rotate(nums);
     //int[][] rotate = reversArr(nums);
     //ArrayList<Integer> integers = printMatrix(nums);
 //    for (int i = 0; i < rotate.length; i++) {
@@ -134,10 +136,10 @@ public class MainAlgorithm {
 //        System.out.println(rotate[i][j]);
 //      }
 //    }
-    int[] integers = createNoRepeatArr1();
-    for(int i = 0; i < integers.length; i++){
-      System.out.println(integers[i]);
-    }
+//    int[] integers = createNoRepeatArr1();
+//    for(int i = 0; i < integers.length; i++){
+//      System.out.println(integers[i]);
+//    }
 //    for(int i = 0; i < 10; i++){
 //      System.out.println(new Random().nextInt(0));
 //    }

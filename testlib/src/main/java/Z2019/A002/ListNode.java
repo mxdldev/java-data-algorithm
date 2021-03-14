@@ -18,4 +18,12 @@ public class ListNode {
   public int val() {
     return val;
   }
+
+  @Override
+  public String toString() {
+    return "ListNode{" +
+            "val=" + val +
+            ", next=" + next +
+            '}';
+  }
 }

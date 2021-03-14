@@ -15,6 +15,27 @@ public class MainAlgorithm {
         String str = "ababcddefacc";
         System.out.println(lengthOfLongestSubstring(str));
     }
+    //查找最大的非重复字符串
+    static String getMaxStr(String s) {
+        for (int len = s.length(); len > 1; len--) {
+            for (int i = 0, j = len; i <= s.length() - len; i++, j = i + len) {
+                boolean flag = false;
+                HashSet<Character> set = new HashSet<>();
+                for (int start = i; start <= j; start++) {
+                    if (set.contains(s.charAt(start))) {
+                        flag = true;
+                        break;
+                    }else{
+                        set.add(s.charAt(start));
+                    }
+                }
+                if (!flag) {
+                    return s.substring(i, j+1);
+                }
+            }
+        }
+        return null;
+    }
 
     public static String lengthOfLongestSubstring(String s) {
         // 哈希集合，记录每个字符是否出现过
