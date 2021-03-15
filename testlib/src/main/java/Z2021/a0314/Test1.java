@@ -60,10 +60,9 @@ class Test1 {
         return result;
     }
     static int get(int num,int n){
-        int result = num;
-        while (n > 1){
+        int result = 1;
+        while (n-- > 0){
             result *= num;
-            n--;
         }
         return result;
     }

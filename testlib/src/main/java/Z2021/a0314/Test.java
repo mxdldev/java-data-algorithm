@@ -74,7 +74,6 @@ class Test {
                 String s1 = s.substring(i,j+1);
                 StringBuffer buffer = new StringBuffer(s1);
                 if(s1.equals(buffer.reverse().toString()) && s1.length() > max.length()){
-                    //return s1;
                     max = s1;
                 }
             }
