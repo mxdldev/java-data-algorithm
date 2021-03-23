@@ -5,6 +5,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Test {
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
+
     static int[] sortArr(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = i + 1; j < nums.length; j++) {
