@@ -154,6 +154,7 @@ public class Test {
         //System.out.println(getMinValue(new int[][]{{1,2,3},{4,2,1}}));
         //System.out.println(Arrays.toString(getMaxValue(new int[]{5,25,2,19})));
         //System.out.println(getHalfIndx(new int[]{2, 3, 4, 12, 24, 35}, 12));
-        System.out.println(Arrays.toString(createArray(new int[][]{{0,1,2},{3,4,5},{6,7,8}})));
+        //System.out.println(Arrays.toString(createArray(new int[][]{{0,1,2},{3,4,5},{6,7,8}})));
+
     }
 }
