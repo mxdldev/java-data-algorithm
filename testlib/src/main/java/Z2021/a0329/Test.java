@@ -1,5 +1,7 @@
 package Z2021.a0329;
 
+import java.util.Arrays;
+
 import Z2019.A002.ListNode;
 
 public class Test {
@@ -31,13 +33,14 @@ public class Test {
         }
         return result;
     }
-    static ListNode removeListNode(ListNode note,int target){
+
+    static ListNode removeListNode(ListNode note, int target) {
         ListNode root = new ListNode(-1);
         root.next = note;
         ListNode prev = root;
         ListNode curr = note;
-        while (curr != null){
-            if(curr.val == target){
+        while (curr != null) {
+            if (curr.val == target) {
                 break;
             }
             prev = curr;
@@ -46,36 +49,78 @@ public class Test {
         prev.next = curr.next;
         return root.next;
     }
-    static boolean isListNodeRing(ListNode head){
+
+    static boolean isListNodeRing(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
-        while (fast != null && fast.next != null){
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            if(slow == fast){
+            if (slow == fast) {
                 return true;
             }
         }
         return false;
     }
-    static ListNode isListNodeRing1(ListNode head){
+
+    static ListNode isListNodeRing1(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
-        while (fast != null && fast.next != null){
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            if(slow == fast){
+            if (slow == fast) {
                 fast = head;
-                while (slow != null){
+                while (slow != null) {
                     slow = slow.next;
                     fast = fast.next;
-                    if(slow == fast){
+                    if (slow == fast) {
                         return slow;
                     }
                 }
             }
         }
         return null;
+    }
+
+    static ListNode reverseListNode(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
+    static ListNode reverseListNode1(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null) {
+            //断链
+            ListNode next = curr.next;
+            //翻转
+            curr.next = prev;
+            //prev指针移动
+            prev = curr;
+            //next指针移动
+            curr = next;
+        }
+        return prev;
+    }
+    static ListNode removeListNodeIndex(ListNode head,int num){
+        ListNode fast = head;
+        for (int i = 0; i < num + 1;i++){
+            fast = fast.next;
+        }
+        ListNode slow = head;
+        while (fast != null){
+            fast = fast.next;
+            slow = slow.next;
+        }
+        slow.next = slow.next.next;
+        return head;
     }
     public static void main(String[] args) {
         //System.out.println(halfSearchIndex(new int[]{2, 5, 19, 25}, 19));
@@ -89,10 +134,13 @@ public class Test {
         listNode.next = listNode1;
         listNode1.next = listNode2;
         listNode2.next = listNode3;
-        listNode3.next = listNode1;
+        ///listNode3.next = listNode1;
 
         //System.out.println(removeListNode(listNode,2));
-        System.out.println(isListNodeRing1(listNode).val);
-
+        //System.out.println(isListNodeRing1(listNode).val);
+        System.out.println(listNode.toString());
+        //System.out.println(reverseListNode(listNode).toString());
+        //System.out.println(reverseListNode1(listNode).toString());
+        System.out.println(removeListNodeIndex(listNode,2).toString());
     }
 }
