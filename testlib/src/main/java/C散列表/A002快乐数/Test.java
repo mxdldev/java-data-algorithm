@@ -12,7 +12,7 @@ import java.util.Set;
  */
 class Test {
     public static void main(String[] args) {
-        System.out.println(isHappy(10));
+        System.out.println(isHappy(3));
     }
     static boolean isHappy(int n){
         Set<Integer> set = new HashSet<>();

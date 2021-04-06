@@ -1,6 +1,7 @@
 package Z2021.a0329;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 import Z2019.A002.ListNode;
 
@@ -94,6 +95,7 @@ public class Test {
         }
         return prev;
     }
+
     static ListNode reverseListNode1(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
@@ -109,38 +111,137 @@ public class Test {
         }
         return prev;
     }
-    static ListNode removeListNodeIndex(ListNode head,int num){
+
+    static ListNode removeListNodeIndex(ListNode head, int num) {
         ListNode fast = head;
-        for (int i = 0; i < num + 1;i++){
+        for (int i = 0; i < num + 1; i++) {
             fast = fast.next;
         }
         ListNode slow = head;
-        while (fast != null){
+        while (fast != null) {
             fast = fast.next;
             slow = slow.next;
         }
         slow.next = slow.next.next;
         return head;
     }
+
+    static ListNode mergeListNode(ListNode list1, ListNode list2) {
+        ListNode curr = null;
+        ListNode head = null;
+        while (list1 != null && list2 != null) {
+            if (list1.val > list2.val) {
+                if (curr == null) {
+                    curr = list2;
+                    head = curr;
+                } else {
+                    curr.next = list2;
+                    curr = curr.next;
+                }
+                list2 = list2.next;
+            } else {
+                if (curr == null) {
+                    curr = list1;
+                    head = curr;
+                } else {
+                    curr.next = list1;
+                    curr = curr.next;
+                }
+                list1 = list1.next;
+            }
+        }
+        if (list1 != null) {
+            curr.next = list1;
+        }
+        if (list2 != null) {
+            curr.next = list2;
+        }
+        return head;
+    }
+
+    static ListNode mergeListNode1(ListNode list1, ListNode list2) {
+        ListNode head = new ListNode(-1);
+        ListNode tail = head;
+        while (list1 != null && list2 != null){
+            if(list1.val < list2.val){
+                tail.next = list1;
+                list1 = list1.next;
+            }else{
+                tail.next = list2;
+                list2 = list2.next;
+            }
+            tail = tail.next;
+        }
+        tail.next = list1 != null ? list1 : list2;
+        return head.next;
+    }
+    static ListNode removeListNode1(ListNode list1,int target){
+        ListNode head = new ListNode(-1);
+        head.next = list1;
+        ListNode prev = head;
+        ListNode curr = head.next;
+        while (curr != null){
+            if(curr.val == target){
+                break;
+            }
+            curr = curr.next;
+            prev = prev.next;
+        }
+        prev.next = prev.next.next;
+        return head.next;
+    }
     public static void main(String[] args) {
         //System.out.println(halfSearchIndex(new int[]{2, 5, 19, 25}, 19));
         //int[][] ints = rotationMatrix(new int[][]{{0, 1, 2}, {3, 4, 5}, {6, 7, 8}});
         //System.out.println();
-        ListNode listNode = new ListNode(0);
-        ListNode listNode1 = new ListNode(1);
-        ListNode listNode2 = new ListNode(2);
-        ListNode listNode3 = new ListNode(3);
-
-        listNode.next = listNode1;
-        listNode1.next = listNode2;
-        listNode2.next = listNode3;
+//        ListNode listNode = new ListNode(0);
+//        ListNode listNode1 = new ListNode(1);
+//        ListNode listNode2 = new ListNode(2);
+//        ListNode listNode3 = new ListNode(3);
+//
+//        listNode.next = listNode1;
+//        listNode1.next = listNode2;
+//        listNode2.next = listNode3;
         ///listNode3.next = listNode1;
 
         //System.out.println(removeListNode(listNode,2));
         //System.out.println(isListNodeRing1(listNode).val);
-        System.out.println(listNode.toString());
+        //System.out.println(listNode.toString());
         //System.out.println(reverseListNode(listNode).toString());
         //System.out.println(reverseListNode1(listNode).toString());
-        System.out.println(removeListNodeIndex(listNode,2).toString());
+        //System.out.println(removeListNodeIndex(listNode,2).toString());
+        ListNode listNode0 = new ListNode(0);
+        ListNode listNode2 = new ListNode(2);
+        ListNode listNode4 = new ListNode(4);
+
+        listNode0.next = listNode2;
+        listNode2.next = listNode4;
+
+        ListNode listNode1 = new ListNode(1);
+        ListNode listNode3 = new ListNode(3);
+        ListNode listNode5 = new ListNode(5);
+        ListNode listNode7 = new ListNode(7);
+        ListNode listNode8 = new ListNode(8);
+
+        listNode1.next = listNode3;
+        listNode3.next = listNode5;
+        listNode5.next = listNode7;
+        listNode7.next = listNode8;
+
+        //System.out.println(mergeListNode(listNode0, listNode1).toString());
+        //System.out.println(mergeListNode1(listNode0, listNode1).toString());
+        System.out.println(removeListNode1(listNode1,1).toString());
+
+        char c = '~';
+        System.out.println((int)c);
+
+        byte a = 127;
+        char c1 = '/';
+        System.out.println((double) c1);
+
+        int a1 = 98;
+        System.out.println((char)a1);
+
+        HashSet<Integer> set = new HashSet<>();
     }
 }
