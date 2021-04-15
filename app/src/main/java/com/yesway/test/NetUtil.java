@@ -20,6 +20,7 @@ public class NetUtil {
     public static final int NETWORK_NONE = 0; // 没有网络连接
     public static final int NETWORK_WIFI = 1; // wifi连接
     public static final int NETWORK_2G = 2; // 2G
+
     public static final int NETWORK_3G = 3; // 3G
     public static final int NETWORK_4G = 4; // 4G
     public static final int NETWORK_MOBILE = 5; // 手机流量
